@@ -1,7 +1,7 @@
 """
 generate_docs_site.py
-Generates an interactive, standalone single-page web application
-for Expense Tracker App (Khaata · Expense Intelligence) for GitHub Pages.
+Generates a Swiss Modern Minimalist / Monospaced Editorial Dark UI
+for Expense-Tracker-App (Khaata · Expense Intelligence).
 """
 
 import json
@@ -16,22 +16,10 @@ budget_df = pd.read_csv("outputs/reports/budget_vs_actual.csv")
 anomalies_df = pd.read_csv("outputs/reports/anomalies.csv")
 cleaned_df = pd.read_csv("data/cleaned_expenses.csv")
 
-# Sort cleaned transactions by date descending
 cleaned_df["Date"] = pd.to_datetime(cleaned_df["Date"])
 cleaned_df = cleaned_df.sort_values("Date", ascending=False)
-sample_txns = cleaned_df.head(100).copy()
-sample_txns["Date"] = sample_txns["Date"].dt.strftime("%Y-%m-%d")
-
-# Prepare payment method breakdown
-payment_mix = cleaned_df[cleaned_df["Type"] == "Expense"].groupby("Payment_Method")["Amount"].sum().reset_index()
-payment_mix["Percentage"] = (payment_mix["Amount"] / payment_mix["Amount"].sum() * 100).round(1)
-
-# Prepare weekday distribution
-weekday_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-weekday_spend = cleaned_df[cleaned_df["Type"] == "Expense"].groupby("Weekday")["Amount"].agg(["sum", "count"]).reindex(weekday_order).reset_index()
-
-# Top 10 merchants
-top_merchants = cleaned_df[cleaned_df["Type"] == "Expense"].groupby("Merchant")["Amount"].agg(["sum", "count"]).sort_values("sum", ascending=False).head(10).reset_index()
+sample_txns = cleaned_df.head(60).copy()
+sample_txns["Date"] = sample_txns["Date"].dt.strftime("%d %b %Y")
 
 data_payload = {
     "kpis": {
@@ -42,17 +30,12 @@ data_payload = {
         "health_score": 53,
         "health_label": "Fair",
         "forecast_next_month": 53242,
-        "top_category": "Rent",
-        "top_category_amount": 168000,
         "total_txns": len(cleaned_df)
     },
     "monthly": monthly_df.fillna(0).to_dict(orient="records"),
     "categories": cat_df.to_dict(orient="records"),
     "budget": budget_df.to_dict(orient="records"),
     "anomalies": anomalies_df.to_dict(orient="records"),
-    "payment_mix": payment_mix.to_dict(orient="records"),
-    "weekday_spend": weekday_spend.to_dict(orient="records"),
-    "top_merchants": top_merchants.to_dict(orient="records"),
     "transactions": sample_txns[["Date", "Category", "Description", "Merchant", "Amount", "Type", "Payment_Method"]].to_dict(orient="records")
 }
 
@@ -61,737 +44,592 @@ html_content = f"""<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khaata · Expense Intelligence & Personal Finance Suite</title>
+  <title>KHAATA — Personal Spend Intelligence & Capital Ledger</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
   <style>
     :root {{
-      --bg-base: #0c0e14;
-      --bg-card: rgba(19, 23, 34, 0.75);
-      --bg-card-hover: rgba(28, 34, 50, 0.85);
-      --border-card: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(143, 164, 194, 0.3);
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --primary: #38bdf8;
-      --accent: #818cf8;
-      --success: #34d399;
-      --warning: #fbbf24;
-      --danger: #f87171;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --paper: #131312;
+      --card: #1a1a18;
+      --card-subtle: #161614;
+      --line: #292926;
+      --line-subtle: #21211e;
+      --ink: #ecece6;
+      --ink-muted: #9c9c94;
+      --ink-dim: #6e6e66;
+      --accent: #8fa4c2;
+      --accent-dim: rgba(143, 164, 194, 0.12);
+      --green: #88aa80;
+      --amber: #d4a373;
+      --red: #c97a7e;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
     }}
 
-    * {{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
 
     body {{
-      background-color: var(--bg-base);
-      color: var(--text-main);
-      font-family: var(--font-sans);
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 14px;
       line-height: 1.6;
-      background-image: 
-        radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.07) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.07) 0%, transparent 40%);
-      background-attachment: fixed;
-      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }}
 
-    header {{
-      background: rgba(12, 14, 20, 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-card);
+    /* Editorial Masthead */
+    .masthead {{
+      border-bottom: 1px solid var(--line);
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--paper);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      z-index: 40;
     }}
 
-    .logo-container {{
+    .mast-brand {{
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      align-items: baseline;
+      gap: 1rem;
     }}
 
-    .logo-badge {{
-      background: linear-gradient(135deg, #38bdf8, #818cf8);
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: #0c0e14;
-    }}
-
-    .logo-text h1 {{
-      font-size: 1.15rem;
+    .mast-title {{
+      font-family: var(--font-mono);
+      font-size: 0.9375rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
     }}
 
-    .logo-text p {{
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }}
-
-    nav {{
-      display: flex;
-      gap: 1.25rem;
-    }}
-
-    nav a {{
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-      cursor: pointer;
-    }}
-
-    nav a:hover, nav a.active {{
-      color: var(--primary);
-    }}
-
-    .container {{
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem;
-    }}
-
-    .hero {{
-      text-align: center;
-      padding: 2.5rem 1rem 2rem;
-    }}
-
-    .hero-badge {{
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 1rem;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }}
-
-    .hero h2 {{
-      font-size: 2.75rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }}
-
-    .hero p {{
-      max-width: 750px;
-      margin: 0 auto;
-      color: var(--text-muted);
-      font-size: 1.05rem;
-    }}
-
-    .kpi-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 2.5rem;
-    }}
-
-    .kpi-card {{
-      background: var(--bg-card);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-card);
-      border-radius: 14px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
-    }}
-
-    .kpi-card:hover {{
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-    }}
-
-    .kpi-title {{
-      font-size: 0.8rem;
+    .mast-edition {{
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--ink-dim);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--text-dim);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
     }}
 
-    .kpi-value {{
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: var(--text-main);
+    .mast-links a {{
       font-family: var(--font-mono);
-      letter-spacing: -0.02em;
-    }}
-
-    .kpi-subtext {{
       font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.35rem;
+      color: var(--ink-muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }}
 
-    .section-title {{
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .mast-links a:hover {{ color: var(--ink); }}
+
+    .wrap {{
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
     }}
 
-    .grid-2 {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-      gap: 1.5rem;
+    /* Editorial Headline Block */
+    .hero-lead {{
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2rem;
       margin-bottom: 2.5rem;
-    }}
-
-    .grid-3 {{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: end;
     }}
 
-    .panel {{
-      background: var(--bg-card);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-card);
-      border-radius: 14px;
-      padding: 1.5rem;
+    @media (max-width: 850px) {{
+      .hero-lead {{ grid-template-columns: 1fr; gap: 1.5rem; }}
     }}
 
-    .chart-container {{
-      width: 100%;
-      height: 380px;
+    .hero-lead h1 {{
+      font-size: 2.1rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1.25;
     }}
 
-    /* Simulator Styles */
-    .simulator-box {{
+    .hero-lead h1 strong {{
+      font-weight: 600;
+      color: #ffffff;
+    }}
+
+    .hero-meta-panel {{
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      border-left: 1px solid var(--line);
+      padding-left: 1.5rem;
+      line-height: 1.8;
+    }}
+
+    /* Key Numbers Grid */
+    .stats-row {{
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 3rem;
     }}
 
-    @media (max-width: 900px) {{
-      .simulator-box {{
-        grid-template-columns: 1fr;
-      }}
-      .grid-2 {{
-        grid-template-columns: 1fr;
-      }}
+    @media (max-width: 850px) {{
+      .stats-row {{ grid-template-columns: repeat(2, 1fr); }}
     }}
 
-    .sim-slider-row {{
-      margin-bottom: 1.15rem;
+    .stat-cell {{
+      padding: 1.25rem 1.5rem;
+      border-right: 1px solid var(--line);
     }}
 
-    .sim-slider-header {{
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
+    .stat-cell:last-child {{ border-right: none; }}
+
+    .stat-label {{
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-dim);
       margin-bottom: 0.35rem;
     }}
 
-    .sim-slider-header span:first-child {{
-      color: var(--text-muted);
-      font-weight: 500;
+    .stat-val {{
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
     }}
 
-    .sim-slider-header span:last-child {{
-      font-family: var(--font-mono);
-      color: var(--primary);
-      font-weight: 600;
+    .stat-sub {{
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      margin-top: 0.2rem;
     }}
+
+    /* Main Two-Column Layout */
+    .col-split {{
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }}
+
+    @media (max-width: 950px) {{
+      .col-split {{ grid-template-columns: 1fr; gap: 2rem; }}
+    }}
+
+    .section-tag {{
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-dim);
+      margin-bottom: 0.5rem;
+      display: block;
+    }}
+
+    .panel-header {{
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }}
+
+    /* Minimal Lever Adjuster */
+    .lever-card {{
+      background: var(--card-subtle);
+      border: 1px solid var(--line);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }}
+
+    .lever-row {{
+      margin-bottom: 1.25rem;
+    }}
+
+    .lever-label-row {{
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      margin-bottom: 0.4rem;
+    }}
+
+    .lever-label-row span:first-child {{ color: var(--ink-muted); }}
+    .lever-label-row span:last-child {{ color: var(--ink); }}
 
     input[type=range] {{
-      width: 100%;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      outline: none;
       -webkit-appearance: none;
-      cursor: pointer;
+      width: 100%;
+      height: 2px;
+      background: var(--line);
+      outline: none;
     }}
 
     input[type=range]::-webkit-slider-thumb {{
       -webkit-appearance: none;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--primary);
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+      width: 12px;
+      height: 12px;
+      border-radius: 0;
+      background: var(--ink);
       cursor: pointer;
     }}
 
-    .sim-result-card {{
-      background: rgba(12, 14, 20, 0.6);
-      border: 1px solid var(--border-accent);
-      border-radius: 12px;
-      padding: 1.75rem;
+    .lever-output {{
+      border-top: 1px dashed var(--line);
+      padding-top: 1rem;
+      margin-top: 1.25rem;
       display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
+      justify-content: space-between;
+      align-items: center;
     }}
 
-    .table-wrapper {{
-      overflow-x: auto;
-      max-height: 450px;
+    .output-num {{
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--green);
     }}
 
-    table {{
+    /* Category Meters */
+    .cat-item {{
+      margin-bottom: 0.85rem;
+    }}
+
+    .cat-header {{
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      margin-bottom: 0.25rem;
+    }}
+
+    .cat-bar {{
+      height: 4px;
+      background: var(--card);
+      border-radius: 2px;
+      overflow: hidden;
+    }}
+
+    .cat-fill {{
+      height: 100%;
+      background: var(--accent);
+    }}
+
+    /* Ledger Table */
+    .ledger-table {{
       width: 100%;
       border-collapse: collapse;
+      font-size: 0.8125rem;
+    }}
+
+    .ledger-table th {{
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-dim);
+      font-weight: 400;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid var(--line);
       text-align: left;
-      font-size: 0.85rem;
     }}
 
-    th {{
-      background: rgba(12, 14, 20, 0.9);
-      color: var(--text-dim);
-      font-weight: 600;
-      padding: 0.75rem 1rem;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid var(--border-card);
+    .ledger-table td {{
+      padding: 0.65rem 0.5rem;
+      border-bottom: 1px solid var(--line-subtle);
+      color: var(--ink-muted);
     }}
 
-    td {{
-      padding: 0.65rem 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--text-muted);
+    .ledger-table tr:hover td {{
+      color: var(--ink);
+      background: rgba(255,255,255,0.015);
     }}
 
-    tr:hover td {{
-      background: rgba(255, 255, 255, 0.02);
-      color: var(--text-main);
+    .amount-debit {{
+      font-family: var(--font-mono);
+      color: var(--ink);
+      text-align: right;
     }}
 
-    .badge-pill {{
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }}
-
-    .status-over {{
-      background: rgba(248, 113, 113, 0.15);
-      color: #f87171;
-      border: 1px solid rgba(248, 113, 113, 0.4);
-    }}
-
-    .status-under {{
-      background: rgba(52, 211, 153, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(52, 211, 153, 0.4);
-    }}
-
-    .status-limit {{
-      background: rgba(251, 191, 36, 0.15);
-      color: #fbbf24;
-      border: 1px solid rgba(251, 191, 36, 0.4);
+    .amount-credit {{
+      font-family: var(--font-mono);
+      color: var(--green);
+      text-align: right;
     }}
 
     footer {{
-      border-top: 1px solid var(--border-card);
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.85rem;
-      margin-top: 4rem;
-    }}
-
-    footer a {{
-      color: var(--primary);
-      text-decoration: none;
+      border-top: 1px solid var(--line);
+      padding-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--ink-dim);
+      display: flex;
+      justify-content: space-between;
     }}
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo-container">
-      <div class="logo-badge">₹</div>
-      <div class="logo-text">
-        <h1>Khaata · Expense Intelligence</h1>
-        <p>Personal Finance Analytics, Anomaly Radar & Predictive Cashflow</p>
-      </div>
+  <header class="masthead">
+    <div class="mast-brand">
+      <span class="mast-title">Khaata</span>
+      <span class="mast-edition">Issue 04 &bull; Spend Intelligence & Surplus Ledger</span>
     </div>
-    <nav>
-      <a href="#overview" class="active">Overview</a>
-      <a href="#cashflow">Cash Flow</a>
-      <a href="#budget">Budget vs Actual</a>
-      <a href="#simulator">What-If Planner</a>
-      <a href="#transactions">Ledger</a>
-      <a href="https://github.com/rohitsingh83/Expense-Tracker-App" target="_blank">GitHub Repo ↗</a>
-    </nav>
+    <div class="mast-links">
+      <a href="#cashflow">Flow</a>
+      <a href="#planner">Planner</a>
+      <a href="#ledger">Transactions</a>
+      <a href="https://github.com/rohitsingh83/Expense-Tracker-App" target="_blank">Repository ↗</a>
+    </div>
   </header>
 
-  <div class="container">
-    <section class="hero" id="overview">
-      <div class="hero-badge">✦ Complete Personal Finance Intelligence Suite</div>
-      <h2>Take Absolute Control of Personal Wealth & Cash Burn</h2>
-      <p>Automated cleaning, 10 analytical visualizations, budget adherence auditing, outlier detection (Modified Z-score &ge; 2.5), next-month expenditure forecasting, and an interactive what-if savings simulator.</p>
-    </section>
-
-    <!-- KPI Summary Cards -->
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-title">Total Inflows (12M)</div>
-        <div class="kpi-value">₹{data_payload["kpis"]["total_income"]:,}</div>
-        <div class="kpi-subtext">Salary + freelancing + dividends</div>
+  <div class="wrap">
+    <div class="hero-lead">
+      <div>
+        <span class="section-tag">Audit Period: 01 Nov 2025 → 15 Oct 2026</span>
+        <h1>Personal wealth isn't made in gross earnings — it's preserved in <strong>outflow discipline</strong> and <strong>leak detection</strong>.</h1>
       </div>
-      <div class="kpi-card">
-        <div class="kpi-title">Total Outflows (12M)</div>
-        <div class="kpi-value">₹{data_payload["kpis"]["total_expense"]:,}</div>
-        <div class="kpi-subtext">Across 671 ledger transactions</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-title">Net Accumulated Savings</div>
-        <div class="kpi-value">₹{data_payload["kpis"]["net_savings"]:,}</div>
-        <div class="kpi-subtext">Savings rate: {data_payload["kpis"]["savings_rate"]}%</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-title">Financial Health Score</div>
-        <div class="kpi-value">{data_payload["kpis"]["health_score"]}/100</div>
-        <div class="kpi-subtext">Status: {data_payload["kpis"]["health_label"]} (Emergency fund buffer low)</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-title">Next Month Forecast</div>
-        <div class="kpi-value">₹{data_payload["kpis"]["forecast_next_month"]:,}</div>
-        <div class="kpi-subtext">Linear regression + 3M weighted average</div>
+      <div class="hero-meta-panel">
+        <div>SUBJECT: Arjun Rao</div>
+        <div>ROLE: Junior Data Analyst, Hyderabad</div>
+        <div>LEDGER ENTRIES: {data_payload["kpis"]["total_txns"]} audited</div>
+        <div>INTELLIGENCE: Anomaly radar + 30d forecast</div>
       </div>
     </div>
 
-    <!-- Charts Section 1: Cash Flow & Trends -->
-    <div class="section-title" id="cashflow">📈 Monthly Inflow vs Outflow Velocity</div>
-    <div class="grid-2">
-      <div class="panel">
-        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Income vs Expense Trend (Monthly)</h3>
-        <div id="chart-monthly" class="chart-container"></div>
+    <!-- Stats Grid -->
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-label">Total Inflows (12m)</div>
+        <div class="stat-val">₹{data_payload["kpis"]["total_income"]:,}</div>
+        <div class="stat-sub">Across 12 cycles & salary credits</div>
       </div>
-      <div class="panel">
-        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Net Monthly Savings & Accumulation</h3>
-        <div id="chart-savings" class="chart-container"></div>
+      <div class="stat-cell">
+        <div class="stat-label">Total Outflows (12m)</div>
+        <div class="stat-val">₹{data_payload["kpis"]["total_expense"]:,}</div>
+        <div class="stat-sub">Across 9 spending categories</div>
       </div>
-    </div>
-
-    <!-- Charts Section 2: Category Breakdown & Payment Mix -->
-    <div class="section-title" id="budget">🍕 Category Outflow Breakdown & Budget Adherence</div>
-    <div class="grid-2">
-      <div class="panel">
-        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Expense Distribution by Category</h3>
-        <div id="chart-categories" class="chart-container"></div>
+      <div class="stat-cell">
+        <div class="stat-label">Net Surplus Capital</div>
+        <div class="stat-val" style="color: var(--green);">₹{data_payload["kpis"]["net_savings"]:,}</div>
+        <div class="stat-sub">Effective savings rate: {data_payload["kpis"]["savings_rate"]}%</div>
       </div>
-      <div class="panel">
-        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Payment Method Mix</h3>
-        <div id="chart-payments" class="chart-container"></div>
+      <div class="stat-cell">
+        <div class="stat-label">Health Score</div>
+        <div class="stat-val" style="color: var(--amber);">{data_payload["kpis"]["health_score"]}<span style="font-size:0.9rem; font-weight:400; color:var(--ink-dim);">/100</span></div>
+        <div class="stat-sub">Rating: Fair (Emergency buffer &lt; 2 mo)</div>
       </div>
     </div>
 
-    <!-- Budget vs Actual Table -->
-    <div class="panel" style="margin-bottom: 2.5rem;">
-      <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Monthly Budget vs Actual Burn by Category</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Monthly Budget</th>
-              <th>Avg Monthly Actual</th>
-              <th>Variance</th>
-              <th>Variance %</th>
-              <th>Budget Status</th>
-            </tr>
-          </thead>
-          <tbody id="budget-table-body">
-            <!-- populated by JS -->
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <!-- Editorial Two Column Split -->
+    <div class="col-split">
+      <!-- Left Column: What-If Levers & Category Weightings -->
+      <div>
+        <span class="section-tag">Interactive Optimisation</span>
+        <div class="panel-header">
+          <span>What-If Budget Balancer</span>
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-dim);">SIMULATOR</span>
+        </div>
 
-    <!-- Interactive What-If Budget Simulator -->
-    <div class="section-title" id="simulator">⚡ Interactive What-If Budget Optimizer</div>
-    <div class="panel" style="margin-bottom: 2.5rem;">
-      <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">
-        Simulate budget discipline adjustments below to see how optimizing discretionary leaks immediately boosts your annual savings and Financial Health Score.
-      </p>
-
-      <div class="simulator-box">
-        <div>
-          <div class="sim-slider-row">
-            <div class="sim-slider-header">
-              <span>Food & Dining Reduction:</span>
-              <span id="lbl-food">0% (₹0 saved/mo)</span>
+        <div class="lever-card" id="planner">
+          <div class="lever-row">
+            <div class="lever-label-row">
+              <span>Food & Delivery Outflow Cut:</span>
+              <span id="txt-food">0%</span>
             </div>
-            <input type="range" id="sim-food" min="0" max="50" step="5" value="0" oninput="updateBudgetSim()">
+            <input type="range" id="rng-food" min="0" max="50" step="5" value="0" oninput="runLever()">
           </div>
 
-          <div class="sim-slider-row">
-            <div class="sim-slider-header">
+          <div class="lever-row">
+            <div class="lever-label-row">
               <span>Shopping Discretionary Trim:</span>
-              <span id="lbl-shopping">0% (₹0 saved/mo)</span>
+              <span id="txt-shop">0%</span>
             </div>
-            <input type="range" id="sim-shopping" min="0" max="60" step="5" value="0" oninput="updateBudgetSim()">
+            <input type="range" id="rng-shop" min="0" max="60" step="5" value="0" oninput="runLever()">
           </div>
 
-          <div class="sim-slider-row">
-            <div class="sim-slider-header">
-              <span>Entertainment & Outings Trim:</span>
-              <span id="lbl-ent">0% (₹0 saved/mo)</span>
+          <div class="lever-row">
+            <div class="lever-label-row">
+              <span>Entertainment & Movies:</span>
+              <span id="txt-ent">0%</span>
             </div>
-            <input type="range" id="sim-ent" min="0" max="50" step="5" value="0" oninput="updateBudgetSim()">
+            <input type="range" id="rng-ent" min="0" max="50" step="5" value="0" oninput="runLever()">
           </div>
 
-          <div class="sim-slider-row">
-            <div class="sim-slider-header">
+          <div class="lever-row">
+            <div class="lever-label-row">
               <span>Unused Subscriptions Cancelled:</span>
-              <span id="lbl-sub">₹0 / month</span>
+              <span id="txt-sub">₹0</span>
             </div>
-            <input type="range" id="sim-sub" min="0" max="1000" step="100" value="0" oninput="updateBudgetSim()">
+            <input type="range" id="rng-sub" min="0" max="1000" step="100" value="0" oninput="runLever()">
+          </div>
+
+          <div class="lever-output">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.6875rem; text-transform: uppercase; color: var(--ink-dim);">Extra Annual Wealth</div>
+              <div class="output-num" id="out-wealth">+₹0 / yr</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-family: var(--font-mono); font-size: 0.6875rem; text-transform: uppercase; color: var(--ink-dim);">Projected Savings Rate</div>
+              <div style="font-family: var(--font-mono); font-size: 1.15rem; color: var(--accent); font-weight: 700;" id="out-rate">7.7%</div>
+            </div>
           </div>
         </div>
 
-        <div class="sim-result-card">
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Simulated Monthly Savings</div>
-            <div id="sim-monthly-savings" style="font-size: 2rem; font-weight: 800; font-family: var(--font-mono); color: #34d399; margin-top: 0.35rem;">₹4,514 / mo</div>
-            <div id="sim-annual-savings" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">+₹0 extra wealth accumulated per year</div>
-          </div>
+        <span class="section-tag">Category Outflow Volume</span>
+        <div class="panel-header">
+          <span>Major Expense Concentrations</span>
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-dim);">TOP 5</span>
+        </div>
+        <div id="cat-meters-box">
+          <!-- populated by JS -->
+        </div>
+      </div>
 
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">Projected Savings Rate</div>
-            <div style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-mono); color: #38bdf8;" id="sim-savings-rate">7.7%</div>
-          </div>
+      <!-- Right Column: Flow Chart & Ledger -->
+      <div>
+        <span class="section-tag" id="cashflow">Velocity & Trends</span>
+        <div class="panel-header">
+          <span>Monthly Cash Flow Velocity</span>
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-dim);">INR</span>
+        </div>
+        <div id="plot-flow" style="width: 100%; height: 280px; margin-bottom: 2rem;"></div>
 
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">Simulated Health Score</div>
-            <div style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-mono); color: #fbbf24;" id="sim-health-score">53 / 100</div>
-          </div>
+        <span class="section-tag" id="ledger">Chronological Ledger</span>
+        <div class="panel-header">
+          <span>Latest Transactions</span>
+          <input type="text" id="srch-ledger" placeholder="Search merchant..." style="background: transparent; border: 1px solid var(--line); color: var(--ink); font-family: var(--font-mono); font-size: 0.6875rem; padding: 0.2rem 0.5rem; width: 150px;" oninput="filterLedger()">
+        </div>
+        <div style="overflow-x: auto; max-height: 400px;">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Merchant</th>
+                <th style="text-align: right;">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-ledger"></tbody>
+          </table>
         </div>
       </div>
     </div>
 
-    <!-- Transaction Ledger -->
-    <div class="section-title" id="transactions">📋 Cleaned Transaction Ledger (Latest 100 Entries)</div>
-    <div class="panel">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-        <p style="font-size: 0.85rem; color: var(--text-muted);">
-          Audited and cleaned transaction records with standardized merchants, amount bands, and normalized categories.
-        </p>
-        <input type="text" id="search-txn" placeholder="Search merchant, description, category..." style="background: rgba(12,14,20,0.8); border: 1px solid var(--border-card); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; width: 280px;" oninput="filterTxns()">
-      </div>
-      <div class="table-wrapper">
-        <table id="txn-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Category</th>
-              <th>Description</th>
-              <th>Merchant</th>
-              <th>Payment</th>
-              <th>Type</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody id="txn-body">
-            <!-- populated by JS -->
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <footer>
+      <span>KHAATA // Personal Spend Intelligence Suite &bull; Rohit Singh</span>
+      <span>Hosted on GitHub Pages &bull; DM Sans + Space Mono</span>
+    </footer>
   </div>
-
-  <footer>
-    <p>Khaata · Expense Intelligence Suite &copy; 2026 Rohit Singh &bull; Powered by Python, Pandas & Plotly.js &bull; Hosted on GitHub Pages</p>
-  </footer>
 
   <script>
     const DATA = {json.dumps(data_payload)};
 
-    // Plot Monthly Income vs Expense
-    const months = DATA.monthly.map(m => m.YearMonth);
-    const income = DATA.monthly.map(m => m.Income);
-    const expense = DATA.monthly.map(m => m.Expense);
-    const net = DATA.monthly.map(m => m.Net);
+    // Plot Flow
+    const months = DATA.monthly.map(m => m.YearMonth.replace('2025-', "'25-").replace('2026-', "'26-"));
+    const inc = DATA.monthly.map(m => m.Income);
+    const exp = DATA.monthly.map(m => m.Expense);
 
-    Plotly.newPlot('chart-monthly', [
-      {{ x: months, y: income, name: 'Inflow (Income)', type: 'bar', marker: {{ color: '#34d399' }} }},
-      {{ x: months, y: expense, name: 'Outflow (Expense)', type: 'bar', marker: {{ color: '#f87171' }} }}
+    Plotly.newPlot('plot-flow', [
+      {{ x: months, y: inc, name: 'Inflow', type: 'bar', marker: {{ color: '#88aa80' }} }},
+      {{ x: months, y: exp, name: 'Outflow', type: 'bar', marker: {{ color: '#c97a7e' }} }}
     ], {{
       paper_bgcolor: 'transparent',
       plot_bgcolor: 'transparent',
-      font: {{ color: '#94a3b8', family: 'Plus Jakarta Sans' }},
-      margin: {{ l: 50, r: 20, t: 20, b: 60 }},
+      font: {{ color: '#9c9c94', family: 'Space Mono', size: 10 }},
+      margin: {{ l: 40, r: 10, t: 10, b: 35 }},
       barmode: 'group',
-      yaxis: {{ title: 'Amount (INR)', gridcolor: 'rgba(255,255,255,0.05)' }},
-      legend: {{ orientation: 'h', y: 1.1 }}
+      bargap: 0.25,
+      yaxis: {{ gridcolor: '#21211e', zerolinecolor: '#292926' }},
+      xaxis: {{ gridcolor: 'transparent' }},
+      legend: {{ orientation: 'h', y: 1.15 }}
     }}, {{ responsive: true, displayModeBar: false }});
 
-    // Plot Net Savings
-    Plotly.newPlot('chart-savings', [{{
-      x: months,
-      y: net,
-      type: 'scatter',
-      mode: 'lines+markers',
-      line: {{ color: '#38bdf8', width: 3 }},
-      marker: {{ size: 7, color: net.map(v => v >= 0 ? '#34d399' : '#f87171') }},
-      name: 'Net Savings'
-    }}], {{
-      paper_bgcolor: 'transparent',
-      plot_bgcolor: 'transparent',
-      font: {{ color: '#94a3b8', family: 'Plus Jakarta Sans' }},
-      margin: {{ l: 50, r: 20, t: 20, b: 60 }},
-      yaxis: {{ title: 'Net Savings (INR)', gridcolor: 'rgba(255,255,255,0.05)' }}
-    }}, {{ responsive: true, displayModeBar: false }});
-
-    // Plot Categories Donut
-    const catLabels = DATA.categories.map(c => c.Category);
-    const catValues = DATA.categories.map(c => c.Total_Amount);
-
-    Plotly.newPlot('chart-categories', [{{
-      labels: catLabels,
-      values: catValues,
-      type: 'pie',
-      hole: 0.45,
-      marker: {{
-        colors: ['#38bdf8', '#818cf8', '#34d399', '#fbbf24', '#f87171', '#c084fc', '#f472b6', '#38bdf8', '#2dd4bf']
-      }}
-    }}], {{
-      paper_bgcolor: 'transparent',
-      plot_bgcolor: 'transparent',
-      font: {{ color: '#94a3b8', family: 'Plus Jakarta Sans' }},
-      margin: {{ l: 20, r: 20, t: 20, b: 20 }}
-    }}, {{ responsive: true, displayModeBar: false }});
-
-    // Plot Payment Mix
-    const payLabels = DATA.payment_mix.map(p => p.Payment_Method);
-    const payValues = DATA.payment_mix.map(p => p.Amount);
-
-    Plotly.newPlot('chart-payments', [{{
-      x: payLabels,
-      y: payValues,
-      type: 'bar',
-      marker: {{
-        color: ['#38bdf8', '#818cf8', '#34d399', '#fbbf24', '#f87171']
-      }}
-    }}], {{
-      paper_bgcolor: 'transparent',
-      plot_bgcolor: 'transparent',
-      font: {{ color: '#94a3b8', family: 'Plus Jakarta Sans' }},
-      margin: {{ l: 50, r: 20, t: 20, b: 40 }},
-      yaxis: {{ title: 'Total Spend (INR)', gridcolor: 'rgba(255,255,255,0.05)' }}
-    }}, {{ responsive: true, displayModeBar: false }});
-
-    // Populate Budget vs Actual
-    const budgetTbody = document.getElementById('budget-table-body');
-    DATA.budget.forEach(row => {{
-      const tr = document.createElement('tr');
-      let statusClass = 'status-under';
-      if (row.Status === 'Over budget') statusClass = 'status-over';
-      else if (row.Status === 'Near limit') statusClass = 'status-limit';
-
-      tr.innerHTML = `
-        <td style="font-weight:600; color:white;">${{row.Category}}</td>
-        <td>₹${{Math.round(row.Budget).toLocaleString()}}</td>
-        <td>₹${{Math.round(row.Avg_Monthly_Actual).toLocaleString()}}</td>
-        <td style="color:${{row.Variance < 0 ? '#f87171' : '#34d399'}}">₹${{Math.round(row.Variance).toLocaleString()}}</td>
-        <td>${{row.Variance_%.toFixed(1)}}%</td>
-        <td><span class="badge-pill ${{statusClass}}">${{row.Status}}</span></td>
+    // Populate Category Meters
+    const catBox = document.getElementById('cat-meters-box');
+    const totExpense = DATA.kpis.total_expense;
+    DATA.categories.slice(0, 5).forEach(c => {{
+      const pct = (c.Total_Amount / totExpense * 100).toFixed(1);
+      const div = document.createElement('div');
+      div.className = 'cat-item';
+      div.innerHTML = `
+        <div class="cat-header">
+          <span style="font-weight:500;">${{c.Category}}</span>
+          <span style="font-family:var(--font-mono); color:var(--ink-muted);">₹${{c.Total_Amount.toLocaleString()}} (${{pct}}%)</span>
+        </div>
+        <div class="cat-bar">
+          <div class="cat-fill" style="width: ${{pct}}%;"></div>
+        </div>
       `;
-      budgetTbody.appendChild(tr);
+      catBox.appendChild(div);
     }});
 
-    // Populate Transactions Table
-    const txnBody = document.getElementById('txn-body');
-    function renderTxns(items) {{
-      txnBody.innerHTML = '';
+    // Populate Ledger
+    const tbLedger = document.getElementById('tbl-ledger');
+    function renderLedger(items) {{
+      tbLedger.innerHTML = '';
       items.forEach(t => {{
         const tr = document.createElement('tr');
+        const isInc = t.Type === 'Income';
         tr.innerHTML = `
-          <td style="font-family:var(--font-mono);">${{t.Date}}</td>
-          <td><span class="badge-pill" style="background:rgba(255,255,255,0.06); color:white;">${{t.Category}}</span></td>
+          <td style="font-family:var(--font-mono); font-size:0.75rem;">${{t.Date}}</td>
+          <td><span style="font-family:var(--font-mono); font-size:0.6875rem; text-transform:uppercase; color:var(--ink-dim);">${{t.Category}}</span></td>
           <td>${{t.Description}}</td>
           <td>${{t.Merchant}}</td>
-          <td>${{t.Payment_Method}}</td>
-          <td style="color:${{t.Type === 'Income' ? '#34d399' : '#f87171'}}">${{t.Type}}</td>
-          <td style="font-family:var(--font-mono); font-weight:600; color:${{t.Type === 'Income' ? '#34d399' : 'white'}}">₹${{t.Amount.toLocaleString()}}</td>
+          <td class="${{isInc ? 'amount-credit' : 'amount-debit'}}">${{isInc ? '+' : '-'}}₹${{t.Amount.toLocaleString()}}</td>
         `;
-        txnBody.appendChild(tr);
+        tbLedger.appendChild(tr);
       }});
     }}
-    renderTxns(DATA.transactions);
+    renderLedger(DATA.transactions);
 
-    function filterTxns() {{
-      const q = document.getElementById('search-txn').value.toLowerCase();
+    function filterLedger() {{
+      const q = document.getElementById('srch-ledger').value.toLowerCase();
       const filtered = DATA.transactions.filter(t => 
         t.Merchant.toLowerCase().includes(q) ||
         t.Category.toLowerCase().includes(q) ||
         t.Description.toLowerCase().includes(q)
       );
-      renderTxns(filtered);
+      renderLedger(filtered);
     }}
 
-    // Budget What-If Simulator Logic
-    function updateBudgetSim() {{
-      const foodTrim = parseInt(document.getElementById('sim-food').value);
-      const shopTrim = parseInt(document.getElementById('sim-shopping').value);
-      const entTrim = parseInt(document.getElementById('sim-ent').value);
-      const subTrim = parseInt(document.getElementById('sim-sub').value);
+    function runLever() {{
+      const foodP = parseInt(document.getElementById('rng-food').value);
+      const shopP = parseInt(document.getElementById('rng-shop').value);
+      const entP = parseInt(document.getElementById('rng-ent').value);
+      const subA = parseInt(document.getElementById('rng-sub').value);
 
-      const foodBase = 7078;
-      const shopBase = 6335;
-      const entBase = 3200;
+      document.getElementById('txt-food').innerText = foodP + '%';
+      document.getElementById('txt-shop').innerText = shopP + '%';
+      document.getElementById('txt-ent').innerText = entP + '%';
+      document.getElementById('txt-sub').innerText = '₹' + subA;
 
-      const foodSave = Math.round(foodBase * (foodTrim / 100));
-      const shopSave = Math.round(shopBase * (shopTrim / 100));
-      const entSave = Math.round(entBase * (entTrim / 100));
+      const foodSave = Math.round(7078 * (foodP / 100));
+      const shopSave = Math.round(6335 * (shopP / 100));
+      const entSave = Math.round(3200 * (entP / 100));
 
-      document.getElementById('lbl-food').innerText = `${{foodTrim}}% (₹${{foodSave.toLocaleString()}} saved/mo)`;
-      document.getElementById('lbl-shopping').innerText = `${{shopTrim}}% (₹${{shopSave.toLocaleString()}} saved/mo)`;
-      document.getElementById('lbl-ent').innerText = `${{entTrim}}% (₹${{entSave.toLocaleString()}} saved/mo)`;
-      document.getElementById('lbl-sub').innerText = `₹${{subTrim.toLocaleString()}} / month`;
-
-      const monthlyExtra = foodSave + shopSave + entSave + subTrim;
-      const baseMonthlySavings = 4514;
-      const newMonthlySavings = baseMonthlySavings + monthlyExtra;
+      const monthlyExtra = foodSave + shopSave + entSave + subA;
       const annualExtra = monthlyExtra * 12;
+      const newMonthlySavings = 4514 + monthlyExtra;
+      const newRate = ((newMonthlySavings / 58870) * 100).toFixed(1);
 
-      const avgMonthlyIncome = 58870;
-      const newSavingsRate = ((newMonthlySavings / avgMonthlyIncome) * 100).toFixed(1);
-      const newHealthScore = Math.min(95, Math.round(53 + (monthlyExtra / 280)));
-
-      document.getElementById('sim-monthly-savings').innerText = `₹${{newMonthlySavings.toLocaleString()}} / mo`;
-      document.getElementById('sim-annual-savings').innerText = `+₹${{annualExtra.toLocaleString()}} extra wealth accumulated per year`;
-      document.getElementById('sim-savings-rate').innerText = `${{newSavingsRate}}% (vs 7.7% baseline)`;
-      document.getElementById('sim-health-score').innerText = `${{newHealthScore}} / 100`;
+      document.getElementById('out-wealth').innerText = '+₹' + annualExtra.toLocaleString() + ' / yr';
+      document.getElementById('out-rate').innerText = newRate + '%';
     }}
 
-    updateBudgetSim();
+    runLever();
   </script>
 </body>
 </html>
@@ -801,4 +639,4 @@ os.makedirs("docs", exist_ok=True)
 with open("docs/index.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print(f"Generated docs/index.html ({len(html_content)} bytes)")
+print(f"Generated distinct Swiss-Editorial docs/index.html ({len(html_content)} bytes)")
