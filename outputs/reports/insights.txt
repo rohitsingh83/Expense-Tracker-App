@@ -1,0 +1,16 @@
+EXPENSE TRACKER — AUTO-GENERATED INSIGHTS
+====================================================
+1. Arjun Rao (Junior Data Analyst, Hyderabad) recorded 671 transactions between 01 Nov 2025 and 15 Oct 2026.
+2. Total inflows ₹7,06,441 vs outflows ₹6,52,274 → net savings ₹54,167 (7.7% savings rate).
+3. Savings rate is below 10%. This is the primary risk: a single unplanned expense (medical / travel) would wipe out the buffer.
+4. Largest expense category is Rent at ₹1,68,000 (25.8% of all spending, 12 transactions).
+5. Next is Groceries at ₹85,401 (13.1%). Together the top two categories consume 38.8% of outflow.
+6. 5 categories are over the recommended monthly budget (Groceries, Food & Dining, Shopping, Travel, Entertainment). Combined monthly leak: ₹9,635.
+7. Spending fell ₹936 month-on-month (2026-10: ₹54,946 vs 2026-09: ₹55,882).
+8. Best savings month: 2026-04 (net ₹19,268). Tightest month: 2025-12 (net -₹13,733).
+9. Weekend and weekday ticket sizes are similar — spending is fairly evenly spread through the week.
+10. Food delivery / dining is almost as high as groceries. Cooking 3 extra meals a week is the highest-ROI habit change.
+11. Subscriptions total ₹12,155 across the period. Audit unused OTTs — cancelling two plans typically saves ₹200–₹700 / month.
+12. 1 unusual expenses flagged (modified z-score ≥ 2.5). Largest: ₹1,417 at Domino's Pizza (Food & Dining) on 06 Dec 2025.
+13. Next-month expense forecast: ₹53,242 (blend of linear trend and 3-month average; last month was ₹54,946).
+14. Financial Health Score: 53/100 (Fair) — savings 19.2/40, budget discipline 12.5/35, stability 21.6/25.

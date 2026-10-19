@@ -1,0 +1,685 @@
+Date,Category,Description,Merchant,Amount,Type,Payment_Method,City
+2026-07-26,Miscellaneous,Misc. payment,Courier — DTDC,618.0,Expense,Debit Card,Hyderabad
+2026-03-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-02-19,Cashback,App cashback,PhonePe rewards,248.0,Income,UPI,Hyderabad
+2026-01-02,Transport,Airport drop,Ola,194.0,Expense,UPI,Hyderabad
+2026-10-15, Education ,Stationery,Udemy,1500.0,expense,UPI,Hyderabad
+2026-08-17,Healthcare,Doctor consultation,Yashoda Hospital,1740.0,Expense,UPI,Hyderabad
+2026-03-15,Cashback,App cashback,Amazon Pay cashback,87.0,Income,UPI,Hyderabad
+2026-02-18,SHOPPING,Home essentials,Ajio,1391.0,expense,Cash,Hyderabad
+2026-01-16,Shopping,,Flipkart,1771.0,Expense,UPI,Hyderabad
+2026-09-10,Subscriptions,Plan renewal,Netflix,119.0,Expense,UPI,Hyderabad
+2026-05-05,Insurance,Monthly premium,LIC Premium,1185.0,Expense,Net Banking,Hyderabad
+2026-09-20,Groceries,"Rice, dal and oil",More Supermarket,1569.0,Expense,UPI,Hyderabad
+2026-06-09,Personal Care,Salon,Local Salon,452.0,Expense,Net Banking,Hyderabad
+2026-10-01,Food & Dining,Late-night biryani,Zomato,174.0,Expense,UPI,Hyderabad
+2026-10-08,Entertainment,Movie tickets,Shilparamam,825.0,Expense,Credit Card,Hyderabad
+2026-08-11,Transport,Office commute,Indian Oil Petrol,437.0,Expense,Cash,Hyderabad
+2025-12-19,Transport,Metro smart card,Ola,181.0,Expense,UPI,Hyderabad
+2025-12-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-10-01,Food & Dining,Breakfast on the go,Minerva Coffee Shop,536.0,Expense,UPI,Hyderabad
+2026-02-08,Shopping,Headphones,Ajio,1287.0,Expense,Cash,Hyderabad
+2026-04-10,Subscriptions,Plan renewal,Spotify Premium,119.0,Expense,Cash,Hyderabad
+2026-10-10,Subscriptions,Monthly subscription,ChatGPT Plus,649.0,Expense,Debit Card,Hyderabad
+2026-03-31,Food & Dining,Weekend lunch out,Zomato,800.0,Expense,Credit Card,Hyderabad
+2026-04-07,Utilities,Internet bill,TGNPDCL Electricity,1445.0,Expense,Cash,Hyderabad
+2026-09-10,Food & Dining,Breakfast on the go,Domino's Pizza,263.0,Expense,UPI,Hyderabad
+2026-03-09,Utilities,Gas cylinder,Jio Fiber,399.0,Expense,UPI,Hyderabad
+2026-10-15,Transport,Airport drop,Uber,144.0,Expense,UPI,Hyderabad
+2026-01-20,Miscellaneous,Misc. payment,Courier — DTDC,50.0,Expense,UPI,Hyderabad
+2026-01-12,Transport,Airport drop,Uber,97.0,Expense,UPI,Hyderabad
+2026-06-28,Interest,Savings-account interest,SBI Savings interest,357.0,Income,Net Banking,Hyderabad
+2026-10-06,Food & Dining,Late-night biryani,Swiggy,212.0,Expense,Cash,Hyderabad
+2026-07-06,Food & Dining,Late-night biryani,Zomato,573.0,Expense,UPI,Hyderabad
+2026-04-20,Transport,Bike fuel,TSRTC,220.0,Expense,UPI,Hyderabad
+2025-12-06,Food & Dining,Late-night biryani,Domino's Pizza,1417.0,Expense,UPI,Hyderabad
+2025-12-10, Subscriptions ,Monthly subscription,Hotstar,119.0,EXPENSE,Cash,Hyderabad
+2026-10-05,Groceries,Snacks restock,Reliance Fresh,1423.0,Expense,UPI,Hyderabad
+2026-06-10,Cashback,App cashback,PhonePe rewards,219.0,Income,UPI,Hyderabad
+2026-05-25,Groceries,Household supplies,More Supermarket,1081.0,Expense,UPI,Hyderabad
+2025-12-28,Cashback,App cashback,CRED cashback,272.0,Income,UPI,Hyderabad
+2025-12-09,Food & Dining,Office lunch,Abshek's Kitchen,856.0,Expense,UPI,Hyderabad
+2026-01-10,Personal Care,Salon,Nykaa,874.0,Expense,UPI,Hyderabad
+2026-02-19,Food & Dining,Office lunch,Domino's Pizza,567.0,Expense,Net Banking,Hyderabad
+2026-09-22,Transport,Metro smart card,HP Pay,410.0,Expense,UPI,Hyderabad
+2025-11-05,Shopping,Home essentials,GVK One Mall,2426.0,Expense,UPI,Hyderabad
+2026-03-21,Transport,Metro smart card,Uber,37.0,Expense,UPI,Hyderabad
+2026-04-27,Transport,Metro smart card,Hyderabad Metro,417.0,Expense,Debit Card,Hyderabad
+2026-10-06,Shopping,Headphones,Myntra,1596.0,Expense,UPI,Hyderabad
+2026-07-17,Transport,Airport drop,Indian Oil Petrol,377.0,Expense,Debit Card,Hyderabad
+2026-10-13,Transport,Metro smart card,Hyderabad Metro,119.0,Expense,UPI,Hyderabad
+2025-11-16, Food & Dining ,Office lunch,Starbucks Gachibowli,1123.0,EXPENSE,Credit Card,Hyderabad
+2025-12-10,Groceries,"Rice, dal and oil",Ratnadeep,1313.0,Expense,UPI,Hyderabad
+2026-05-09,Utilities,Internet bill,Jio Fiber,399.0,Expense,Cash,Hyderabad
+2026-05-14,Food & Dining,Office lunch,Starbucks Gachibowli,721.0,Expense,Credit Card,Hyderabad
+2026-03-22,CASHBACK,App cashback,PhonePe rewards,111.0,income,Cash,Hyderabad
+2026-10-15,Freelance,Freelance project payout,Upwork payout,11802.0,Income,Net Banking,Hyderabad
+2026-04-26,Food & Dining,Office lunch,Starbucks Gachibowli,1099.0,Expense,UPI,Hyderabad
+2025-12-03,Food & Dining,Dinner delivery,Chutneys,415.0,Expense,Debit Card,Hyderabad
+2026-08-23,Transport,Airport drop,Rapido,313.0,Expense,Debit Card,Hyderabad
+2026-05-15, Transport ,Metro smart card,Ola,146.0,EXPENSE,UPI,Hyderabad
+2026-01-04,Food & Dining,Coffee with colleagues,Zomato,623.0,Expense,Debit Card,Hyderabad
+2026-01-12,Transport,Late-night cab,Hyderabad Metro,282.0,Expense,Cash,Hyderabad
+2026-10-15,Food & Dining,Office lunch,,166.0,Expense,UPI,Hyderabad
+2025-11-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-02-22,Groceries,Household supplies,More Supermarket,1079.0,Expense,Debit Card,Hyderabad
+2026-07-25,Transport,Airport drop,Hyderabad Metro,65.0,Expense,UPI,Hyderabad
+2026-05-27,Healthcare,Doctor consultation,PharmEasy,321.0,Expense,Debit Card,Hyderabad
+2026-04-20,Food & Dining,Dinner delivery,Zomato,842.0,Expense,Credit Card,Hyderabad
+2025-12-25,Food & Dining,Dinner delivery,Abshek's Kitchen,845.0,Expense,UPI,Hyderabad
+2026-07-25,Transport,Airport drop,Hyderabad Metro,65.0,Expense,UPI,Hyderabad
+2025-12-13,Food & Dining,Dinner delivery,Zomato,1251.0,Expense,Credit Card,Hyderabad
+2026-10-05,Transport,Airport drop,Hyderabad Metro,208.0,Expense,Debit Card,Hyderabad
+2026-04-06,Groceries,Vegetables and milk,BigBasket,1002.0,Expense,Debit Card,Hyderabad
+2025-12-10,Subscriptions,Plan renewal,Netflix,649.0,Expense,Cash,Hyderabad
+2026-07-06,Food & Dining,Dinner delivery,Abshek's Kitchen,247.0,Expense,UPI,Hyderabad
+2026-08-15,Groceries,"Rice, dal and oil",Reliance Fresh,702.0,Expense,UPI,Hyderabad
+2025-12-05,Groceries,Weekly groceries,BigBasket,833.0,Expense,Debit Card,Hyderabad
+2026-10-11,Subscriptions,Monthly subscription,Hotstar,299.0,Expense,Debit Card,Hyderabad
+2025-11-15,Education,Technical book,Stationery Mart,1500.0,Expense,UPI,Hyderabad
+2025-12-08,Food & Dining,Breakfast on the go,Minerva Coffee Shop,686.0,Expense,Debit Card,Hyderabad
+2026-06-05,Insurance,Monthly premium,LIC Premium,1185.0,Expense,Net Banking,Hyderabad
+2026-09-20,Transport,Office commute,Uber,46.0,Expense,Debit Card,Hyderabad
+2025-11-25,Food & Dining,Late-night biryani,Swiggy,888.0,Expense,Debit Card,Hyderabad
+2025-12-08,Shopping,Festival shopping,Myntra,4076.0,Expense,UPI,Hyderabad
+2026-01-27,ENTERTAINMENT,Concert / event,Netflix top-up,376.0,EXPENSE,UPI,Hyderabad
+2026-04-05,Entertainment,Bowling with friends,Wonderla,1984.0,Expense,Debit Card,Hyderabad
+2026-05-10,Food & Dining,Weekend lunch out,Chutneys,782.0,Expense,UPI,Hyderabad
+2026-01-11,Subscriptions,Monthly subscription,YouTube Premium,299.0,Expense,UPI,Hyderabad
+2026-08-08,Transport,Bike fuel,Hyderabad Metro,305.0,Expense,Debit Card,Hyderabad
+2026-04-09,Transport,Office commute,Indian Oil Petrol,214.0,Expense,UPI,Hyderabad
+2026-08-25,Food & Dining,Weekend lunch out,Starbucks Gachibowli,664.0,Expense,UPI,Hyderabad
+2026-05-06,Food & Dining,Coffee with colleagues,Paradise Biryani,617.0,Expense,Debit Card,Hyderabad
+2025-12-06,Shopping,Headphones,Myntra,1641.0,Expense,UPI,Hyderabad
+2026-05-27,Transport,Office commute,Uber,340.0,Expense,UPI,Hyderabad
+2025-11-29,Miscellaneous,Small transfer,Courier — DTDC,154.0,Expense,UPI,Hyderabad
+2026-04-28,Transport,Airport drop,HP Pay,59.0,Expense,Credit Card,Hyderabad
+2026-01-10,Transport,Bike fuel,Ola,188.0,Expense,Cash,Hyderabad
+2025-11-21,food & dining,Late-night biryani,Swiggy,682.0,expense,Debit Card,Hyderabad
+2026-07-20,Shopping,Festival shopping,Ajio,3088.0,Expense,UPI,Hyderabad
+2026-02-22,Transport,Bike fuel,Indian Oil Petrol,102.0,Expense,UPI,Hyderabad
+2025-11-05,Insurance,Monthly premium,Star Health,1185.0,Expense,Net Banking,Hyderabad
+2026-01-18,Freelance,Freelance project payout,Freelance invoice — Tableau dashboard,11067.0,Income,Net Banking,Hyderabad
+2026-05-09,Groceries,Vegetables and milk,BigBasket,1899.0,Expense,UPI,Hyderabad
+2026-02-10,Food & Dining,Dinner delivery,Minerva Coffee Shop,399.0,Expense,UPI,Hyderabad
+2026-01-26,Miscellaneous,Donation,Friend repayment,362.0,Expense,Net Banking,Hyderabad
+2026-09-14,Food & Dining,Breakfast on the go,Minerva Coffee Shop,856.0,Expense,Credit Card,Hyderabad
+2026-09-16,Shopping,Clothes,Lifestyle Inorbit,2658.0,Expense,UPI,Hyderabad
+2026-02-13,Miscellaneous,Donation,Printout / xerox,69.0,Expense,UPI,Hyderabad
+2026-09-09,Utilities,,HMWSSB Water,399.0,Expense,UPI,Hyderabad
+2026-08-06,Food & Dining,Weekend lunch out,Zomato,747.0,Expense,Cash,Hyderabad
+2025-12-16,Food & Dining,Dinner delivery,Swiggy,640.0,Expense,UPI,Hyderabad
+2026-07-31,Miscellaneous,Donation,Printout / xerox,195.0,Expense,Net Banking,Hyderabad
+2026-04-06,Transport,Bike fuel,Rapido,400.0,Expense,Credit Card,Hyderabad
+2026-09-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-10-05,Transport,Office commute,Ola,161.0,Expense,UPI,Hyderabad
+2026-06-08,Food & Dining,Office lunch,Shah Ghouse,483.0,Expense,Credit Card,Hyderabad
+2026-08-12, Transport ,Metro smart card,Indian Oil Petrol,149.0,EXPENSE,Credit Card,Hyderabad
+2025-11-24,Food & Dining,Breakfast on the go,Abshek's Kitchen,905.0,Expense,UPI,Hyderabad
+2026-02-15,Transport,Office commute,Uber,172.0,Expense,Debit Card,Hyderabad
+2025-12-28,INTEREST,Savings-account interest,SBI Savings interest,392.0,INCOME,UPI,Hyderabad
+2026-03-04,Food & Dining,Coffee with colleagues,Cafe Coffee Day,311.0,Expense,UPI,Hyderabad
+2025-12-03,Entertainment,Movie tickets,Netflix top-up,1336.0,Expense,,Hyderabad
+2026-02-20,Transport,Metro smart card,Uber,162.0,Expense,Credit Card,Hyderabad
+2026-07-10,Personal Care,Haircut,Local Salon,395.0,Expense,UPI,Hyderabad
+2026-04-07,Groceries,Household supplies,BigBasket,525.0,Expense,UPI,Hyderabad
+2026-04-19,GROCERIES,Weekly groceries,More Supermarket,1193.0,expense,UPI,Hyderabad
+2026-03-04,Miscellaneous,Donation,Temple donation,605.0,Expense,UPI,Hyderabad
+2026-07-31,Food & Dining,Weekend lunch out,Swiggy,531.0,Expense,Debit Card,Hyderabad
+2026-08-15, Education ,Technical book,NPTEL exam fee,1500.0,EXPENSE,Credit Card,Hyderabad
+2025-11-11,Groceries,"Rice, dal and oil",More Supermarket,530.0,Expense,Debit Card,Hyderabad
+2026-01-21,Transport,Bike fuel,Ola,141.0,Expense,UPI,Hyderabad
+2026-10-07,Transport,Airport drop,Ola,326.0,Expense,UPI,Hyderabad
+2026-03-31,Food & Dining,Breakfast on the go,Domino's Pizza,239.0,Expense,Cash,Hyderabad
+2025-12-28,GROCERIES,Vegetables and milk,BigBasket,781.0,EXPENSE,Cash,Hyderabad
+2025-12-14,Food & Dining,Office lunch,Paradise Biryani,1332.0,Expense,UPI,Hyderabad
+2025-11-30,Food & Dining,Late-night biryani,Abshek's Kitchen,540.0,Expense,UPI,Hyderabad
+2026-02-18,Travel,Hotel stay,IndiGo,2153.0,Expense,UPI,Hyderabad
+2026-08-25,Groceries,Vegetables and milk,DMart Kukatpally,807.0,Expense,UPI,Hyderabad
+2026-06-30,Food & Dining,Breakfast on the go,Swiggy,155.0,Expense,UPI,Hyderabad
+2026-03-13,SHOPPING,Home essentials,Ajio,2561.0,expense,UPI,Hyderabad
+2026-08-30,Miscellaneous,Donation,Courier — DTDC,656.0,Expense,Credit Card,Hyderabad
+2026-09-11,Food & Dining,Late-night biryani,Minerva Coffee Shop,289.0,Expense,UPI,Hyderabad
+2025-11-09,Cashback,App cashback,Amazon Pay cashback,275.0,Income,UPI,Hyderabad
+2026-09-28,Interest,Savings-account interest,SBI Savings interest,336.0,Income,UPI,Hyderabad
+2026-05-11,Cashback,App cashback,Amazon Pay cashback,116.0,Income,Cash,Hyderabad
+2026-06-13,Shopping,Home essentials,Flipkart,644.0,Expense,Net Banking,Hyderabad
+2026-02-18,Transport,Metro smart card,HP Pay,40.0,Expense,Debit Card,Hyderabad
+2025-12-05,Transport,Office commute,TSRTC,59.0,Expense,UPI,Hyderabad
+2026-04-29,Transport,Bike fuel,Uber,107.0,Expense,Cash,Hyderabad
+2026-06-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2025-11-14,Transport,Late-night cab,Hyderabad Metro,99.0,Expense,UPI,Hyderabad
+2026-02-02,Food & Dining,Breakfast on the go,Abshek's Kitchen,453.0,Expense,UPI,Hyderabad
+2026-02-04,Groceries,"Rice, dal and oil",Swiggy Instamart,802.0,Expense,UPI,Hyderabad
+2026-08-09,Utilities,Water bill,Jio Fiber,399.0,Expense,Credit Card,Hyderabad
+2026-04-20,Transport,Bike fuel,TSRTC,325.0,Expense,UPI,Hyderabad
+2026-06-19,Groceries,Vegetables and milk,Swiggy Instamart,1788.0,Expense,UPI,Hyderabad
+2026-07-11,Food & Dining,Office lunch,Starbucks Gachibowli,717.0,Expense,UPI,Hyderabad
+2026-08-15,Transport,Late-night cab,Uber,130.0,Expense,UPI,Hyderabad
+2026-05-01,Transport,Metro smart card,Rapido,317.0,Expense,UPI,Hyderabad
+2026-03-11,Cashback,App cashback,Amazon Pay cashback,55.0,Income,Debit Card,Hyderabad
+2026-03-11,Subscriptions,Plan renewal,ChatGPT Plus,299.0,Expense,Cash,Hyderabad
+2026-08-13,Transport,Bike fuel,Indian Oil Petrol,144.0,Expense,UPI,Hyderabad
+2026-05-10,Subscriptions,Plan renewal,Hotstar,649.0,Expense,UPI,Hyderabad
+2026-02-18,Food & Dining,Weekend lunch out,,200.0,Expense,Credit Card,Hyderabad
+2026-10-14,TRANSPORT,Bike fuel,HP Pay,122.0,expense,UPI,Hyderabad
+2026-02-27,Groceries,"Rice, dal and oil",Swiggy Instamart,998.0,Expense,Cash,Hyderabad
+2026-06-10,,Monthly subscription,The Hindu Digital,649.0,Expense,UPI,Hyderabad
+2026-10-07,UTILITIES,Gas cylinder,Airtel Broadband,1615.0,expense,UPI,Hyderabad
+2026-01-25,Food & Dining,Coffee with colleagues,Paradise Biryani,1002.0,Expense,UPI,Hyderabad
+2026-05-03,Entertainment,Bowling with friends,District by Zomato,933.0,Expense,Debit Card,Hyderabad
+2026-09-17,Miscellaneous,Misc. payment,Friend repayment,694.0,Expense,UPI,Hyderabad
+2026-06-21,Groceries,Household supplies,Reliance Fresh,1076.0,Expense,Cash,Hyderabad
+2026-05-03,Transport,Airport drop,TSRTC,264.0,Expense,Credit Card,Hyderabad
+2026-03-27,Transport,Bike fuel,HP Pay,152.0,Expense,UPI,Hyderabad
+2026-06-05,Food & Dining,Coffee with colleagues,Paradise Biryani,,Expense,Net Banking,Hyderabad
+2025-12-26,Food & Dining,,Shah Ghouse,206.0,Expense,UPI,Hyderabad
+2026-01-01,Food & Dining,Late-night biryani,Swiggy,139.0,Expense,Credit Card,Hyderabad
+2026-09-28,Transport,Bike fuel,Hyderabad Metro,181.0,Expense,UPI,Hyderabad
+2026-02-08,Utilities,Electricity bill,HMWSSB Water,799.0,Expense,Cash,Hyderabad
+2026-03-13,Food & Dining,Weekend lunch out,Domino's Pizza,643.0,Expense,UPI,Hyderabad
+2025-12-20,Transport,Late-night cab,Indian Oil Petrol,78.0,Expense,UPI,Hyderabad
+2025-11-05,Groceries,Household supplies,Reliance Fresh,1830.0,Expense,UPI,Hyderabad
+2025-12-19,Groceries,Vegetables and milk,BigBasket,775.0,Expense,Credit Card,Hyderabad
+2026-08-08,Utilities,Mobile recharge,Airtel Broadband,799.0,Expense,Credit Card,Hyderabad
+2026-05-16,Food & Dining,Dinner delivery,Swiggy,205.0,Expense,Credit Card,Hyderabad
+2026-08-05,Insurance,Monthly premium,Star Health,1185.0,Expense,Net Banking,Hyderabad
+2026-05-14,TRANSPORT,Late-night cab,HP Pay,440.0,expense,Cash,Hyderabad
+2026-05-10,subscriptions,Plan renewal,Spotify Premium,119.0,expense,Cash,Hyderabad
+2026-10-06,Cashback,App cashback,CRED cashback,201.0,Income,UPI,Hyderabad
+2026-01-14,Groceries,Vegetables and milk,Reliance Fresh,893.0,Expense,UPI,Hyderabad
+2026-03-11,Entertainment,Bowling with friends,Spotify,787.0,Expense,UPI,Hyderabad
+2025-11-24,Shopping,Home essentials,Croma,2444.0,Expense,Cash,Hyderabad
+2025-11-24,Food & Dining,Late-night biryani,Starbucks Gachibowli,585.0,Expense,UPI,Hyderabad
+2025-12-09,Food & Dining,Breakfast on the go,Shah Ghouse,479.0,Expense,Debit Card,Hyderabad
+2026-01-28,Entertainment,Concert / event,BookMyShow PVR,1057.0,Expense,UPI,Hyderabad
+2026-09-05,Insurance,Monthly premium,Star Health,1185.0,Expense,Net Banking,Hyderabad
+2026-09-17,Groceries,"Rice, dal and oil",More Supermarket,1780.0,Expense,UPI,Hyderabad
+2025-12-07,Utilities,Mobile recharge,Indane Gas,1691.0,Expense,UPI,Hyderabad
+2025-11-05,Shopping,Phone case / accessories,Croma,2391.0,Expense,UPI,Hyderabad
+2026-08-20,Food & Dining,Dinner delivery,Chutneys,158.0,Expense,Debit Card,Hyderabad
+2026-08-28,Transport,Airport drop,Ola,360.0,Expense,Debit Card,Hyderabad
+2026-09-14,Groceries,Weekly groceries,BigBasket,678.0,Expense,UPI,Hyderabad
+2026-10-09,Transport,Airport drop,Hyderabad Metro,420.0,Expense,UPI,Hyderabad
+2026-08-21,Transport,Airport drop,Hyderabad Metro,448.0,Expense,UPI,Hyderabad
+2026-07-09,Transport,Office commute,Indian Oil Petrol,387.0,Expense,UPI,Hyderabad
+2026-04-04,Groceries,Weekly groceries,Swiggy Instamart,1544.0,Expense,Cash,Hyderabad
+2026-10-04,Transport,Bike fuel,Rapido,133.0,Expense,UPI,Hyderabad
+2026-02-05,Insurance,Monthly premium,Star Health,1185.0,Expense,Net Banking,Hyderabad
+2026-07-16,Food & Dining,Late-night biryani,Abshek's Kitchen,448.0,Expense,Credit Card,Hyderabad
+2026-06-27,Transport,Metro smart card,Hyderabad Metro,175.0,Expense,Debit Card,Hyderabad
+2025-12-14,Personal Care,Grooming kit,Kaya Clinic,1349.0,Expense,UPI,Hyderabad
+2026-10-11,Transport,Office commute,Hyderabad Metro,131.0,Expense,UPI,Hyderabad
+2026-05-06,Travel,Weekend getaway,MakeMyTrip,9940.0,Expense,Credit Card,Hyderabad
+2026-07-03,Entertainment,Concert / event,Shilparamam,1338.0,Expense,Cash,Hyderabad
+2025-12-11,Subscriptions,Monthly subscription,The Hindu Digital,299.0,Expense,UPI,Hyderabad
+2025-11-11,Subscriptions,Plan renewal,YouTube Premium,299.0,Expense,Credit Card,Hyderabad
+2025-11-08,Utilities,Water bill,Indane Gas,799.0,Expense,Net Banking,Hyderabad
+2026-10-13,Cashback,App cashback,CRED cashback,335.0,Income,UPI,Hyderabad
+2026-02-28,Food & Dining,Late-night biryani,Abshek's Kitchen,455.0,Expense,Credit Card,Hyderabad
+2026-09-27,Transport,Office commute,Ola,208.0,Expense,Debit Card,Hyderabad
+2026-09-02,Groceries,"Rice, dal and oil",Swiggy Instamart,1056.0,Expense,Debit Card,Hyderabad
+2026-04-12,Groceries,Snacks restock,BigBasket,1656.0,Expense,UPI,Hyderabad
+2026-04-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-01-12,Healthcare,Vitamins,,1861.0,Expense,Credit Card,Hyderabad
+2026-05-05,Shopping,Clothes,Myntra,1462.0,Expense,UPI,Hyderabad
+2026-04-09,Personal Care,Salon,Kaya Clinic,1115.0,Expense,UPI,Hyderabad
+2025-11-17,Entertainment,Weekend outing,District by Zomato,966.0,Expense,Credit Card,Hyderabad
+2026-08-12,Transport,Office commute,Indian Oil Petrol,261.0,Expense,UPI,Hyderabad
+2026-03-10,Subscriptions,Monthly subscription,Netflix,119.0,Expense,UPI,Hyderabad
+2025-11-05,Transport,Office commute,Indian Oil Petrol,337.0,Expense,Cash,Hyderabad
+2025-11-10,Travel,Hotel stay,RedBus,10271.0,Expense,Net Banking,Hyderabad
+2026-04-08,Entertainment,Weekend outing,Shilparamam,399.0,Expense,UPI,Hyderabad
+2026-02-23,Food & Dining,Late-night biryani,Domino's Pizza,499.0,Expense,Cash,Hyderabad
+2026-06-03,Transport,Bike fuel,Ola,163.0,Expense,UPI,Hyderabad
+2026-10-14,Entertainment,Movie tickets,Shilparamam,1250.0,Expense,Debit Card,Hyderabad
+2026-07-19,Food & Dining,Office lunch,Starbucks Gachibowli,301.0,Expense,Debit Card,Hyderabad
+2025-12-15,Education,Certification exam,NPTEL exam fee,1500.0,Expense,Credit Card,Hyderabad
+2026-04-24,Transport,Office commute,TSRTC,189.0,Expense,UPI,Hyderabad
+2026-05-25,entertainment,Movie tickets,Netflix top-up,1503.0,expense,UPI,Hyderabad
+2026-08-09,Shopping,Festival shopping,GVK One Mall,4146.0,Expense,UPI,Hyderabad
+2026-05-07, Food & Dining ,Coffee with colleagues,Abshek's Kitchen,266.0,EXPENSE,UPI,Hyderabad
+2026-02-15,Transport,Bike fuel,Uber,128.0,Expense,Debit Card,Hyderabad
+2026-02-11,Transport,Office commute,Uber,123.0,Expense,Cash,Hyderabad
+2026-04-11,Subscriptions,Plan renewal,Netflix,299.0,Expense,Net Banking,Hyderabad
+2026-06-01,SALARY,Monthly salary,TCS Salary Credit,55000.0,INCOME,Net Banking,Hyderabad
+2025-12-20,shopping,Clothes,Amazon.in,1795.0,expense,UPI,Hyderabad
+2026-10-02, Groceries ,"Rice, dal and oil",Reliance Fresh,781.0,EXPENSE,UPI,Hyderabad
+2026-04-14, Groceries ,Vegetables and milk,BigBasket,1585.0,expense,Credit Card,Hyderabad
+2026-03-15,Education,Certification exam,Amazon Books,1500.0,Expense,UPI,Hyderabad
+2026-07-03,Cashback,App cashback,CRED cashback,89.0,Income,UPI,Hyderabad
+2026-10-03,Groceries,Weekly groceries,DMart Kukatpally,1556.0,Expense,UPI,Hyderabad
+2025-11-14,Food & Dining,Late-night biryani,Cafe Coffee Day,932.0,Expense,UPI,Hyderabad
+2026-02-08,Personal Care,Haircut,Kaya Clinic,445.0,Expense,UPI,Hyderabad
+2026-08-25,Food & Dining,Office lunch,Minerva Coffee Shop,704.0,Expense,Cash,Hyderabad
+2026-03-28,Transport,Bike fuel,Indian Oil Petrol,293.0,Expense,UPI,Hyderabad
+2026-02-05,Food & Dining,Late-night biryani,Starbucks Gachibowli,554.0,Expense,Debit Card,Hyderabad
+2026-04-05,Insurance,Monthly premium,LIC Premium,1185.0,Expense,Net Banking,Hyderabad
+2026-01-19,Transport,Metro smart card,Ola,172.0,Expense,UPI,Hyderabad
+2025-12-09,Transport,Late-night cab,Uber,222.0,Expense,UPI,Hyderabad
+2026-10-07,Food & Dining,Office lunch,Starbucks Gachibowli,250.0,Expense,Net Banking,Hyderabad
+2025-12-08,Utilities,Gas cylinder,Jio Fiber,799.0,Expense,UPI,Hyderabad
+2026-07-04,Transport,Bike fuel,Indian Oil Petrol,255.0,Expense,UPI,Hyderabad
+2026-02-09,Miscellaneous,Small transfer,GPay self-transfer,200.0,Expense,UPI,Hyderabad
+2026-03-05,Insurance,Monthly premium,Acko Two-Wheeler,1185.0,Expense,Net Banking,Hyderabad
+2025-12-17,Transport,Metro smart card,Indian Oil Petrol,447.0,Expense,UPI,Hyderabad
+2026-09-07,Healthcare,Vitamins,PharmEasy,1304.0,Expense,Cash,Hyderabad
+2026-01-02,Food & Dining,Dinner delivery,Zomato,280.0,Expense,Net Banking,Hyderabad
+2026-01-07,Transport,Metro smart card,Hyderabad Metro,245.0,Expense,UPI,Hyderabad
+2026-10-10,Transport,Office commute,Rapido,280.0,Expense,UPI,Hyderabad
+2026-03-05,Food & Dining,Coffee with colleagues,Starbucks Gachibowli,276.0,Expense,Net Banking,Hyderabad
+2025-11-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-10-07,UTILITIES,Gas cylinder,Airtel Broadband,1615.0,expense,UPI,Hyderabad
+2026-09-10,Transport,Airport drop,Hyderabad Metro,291.0,Expense,Credit Card,Hyderabad
+2026-09-07,utilities,Mobile recharge,Jio Fiber,1617.0,EXPENSE,Cash,Hyderabad
+2026-05-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-01-02,Food & Dining,Dinner delivery,Zomato,747.0,Expense,Debit Card,Hyderabad
+2026-02-28,Transport,Airport drop,Uber,177.0,Expense,Cash,Hyderabad
+2026-05-11,Subscriptions,Monthly subscription,Spotify Premium,299.0,Expense,UPI,Hyderabad
+2026-04-15,Education,Stationery,Coursera,1500.0,Expense,UPI,Hyderabad
+2026-03-28,Groceries,Vegetables and milk,Swiggy Instamart,1870.0,Expense,Cash,Hyderabad
+2026-06-25,Groceries,"Rice, dal and oil",Ratnadeep,1127.0,Expense,Net Banking,Hyderabad
+2026-01-15,Miscellaneous,Small transfer,GPay self-transfer,139.0,Expense,Net Banking,Hyderabad
+2026-07-25,Transport,Metro smart card,Ola,235.0,Expense,Credit Card,Hyderabad
+2026-05-14,Entertainment,Bowling with friends,District by Zomato,1213.0,Expense,UPI,Hyderabad
+2026-10-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-07-20,food & dining,Late-night biryani,Starbucks Gachibowli,580.0,EXPENSE,Net Banking,Hyderabad
+2026-03-24,Transport,Bike fuel,Hyderabad Metro,367.0,Expense,UPI,Hyderabad
+2026-07-05,Healthcare,Blood test,MedPlus,934.0,Expense,Debit Card,Hyderabad
+2025-11-28,Miscellaneous,Small transfer,GPay self-transfer,95.0,Expense,UPI,Hyderabad
+2026-03-18,Food & Dining,Breakfast on the go,Shah Ghouse,627.0,Expense,UPI,Hyderabad
+2026-02-11,Transport,Bike fuel,Uber,282.0,Expense,Credit Card,Hyderabad
+2026-03-13,SHOPPING,Home essentials,Ajio,2561.0,expense,UPI,Hyderabad
+2026-09-05,Entertainment,Weekend outing,Wonderla,2146.0,Expense,Cash,Hyderabad
+2025-12-27,Entertainment,Concert / event,District by Zomato,2294.0,Expense,Debit Card,Hyderabad
+2026-07-05,Insurance,Monthly premium,Acko Two-Wheeler,1185.0,Expense,Net Banking,Hyderabad
+2026-08-03,Entertainment,Bowling with friends,BookMyShow PVR,359.0,Expense,UPI,Hyderabad
+2026-04-18,Freelance,Freelance project payout,Freelance invoice — Tableau dashboard,9102.0,Income,Net Banking,Hyderabad
+2025-12-24,Entertainment,Bowling with friends,Netflix top-up,1057.0,Expense,Debit Card,Hyderabad
+2026-05-05,Food & Dining,Breakfast on the go,Shah Ghouse,375.0,Expense,Debit Card,Hyderabad
+2026-09-26,Shopping,Clothes,Flipkart,2215.0,Expense,UPI,Hyderabad
+2026-07-26,Food & Dining,Breakfast on the go,Paradise Biryani,901.0,Expense,Cash,Hyderabad
+2026-02-07,Utilities,Internet bill,Jio Fiber,1834.0,Expense,UPI,Hyderabad
+2026-06-15,Groceries,Vegetables and milk,DMart Kukatpally,857.0,Expense,UPI,Hyderabad
+2026-01-18,shopping,Festival shopping,Myntra,988.0,expense,Credit Card,Hyderabad
+2026-01-07,Utilities,Internet bill,TGNPDCL Electricity,1488.0,Expense,UPI,Hyderabad
+2026-08-19,Transport,Metro smart card,Rapido,445.0,Expense,UPI,Hyderabad
+2026-09-14,Transport,Office commute,Indian Oil Petrol,387.0,Expense,UPI,Hyderabad
+2026-02-09,Utilities,Electricity bill,Indane Gas,399.0,Expense,,Hyderabad
+2026-08-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-06-06,Groceries,"Rice, dal and oil",DMart Kukatpally,1771.0,Expense,UPI,Hyderabad
+2026-10-15,food & dining,Breakfast on the go,Starbucks Gachibowli,537.0,EXPENSE,UPI,Hyderabad
+2026-05-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-10-04,travel,Hotel stay,IRCTC,5580.0,EXPENSE,UPI,Hyderabad
+2026-01-14,Transport,Metro smart card,Ola,351.0,Expense,UPI,Hyderabad
+2026-01-14,Groceries,Snacks restock,Swiggy Instamart,1480.0,Expense,UPI,Hyderabad
+2026-05-28,Food & Dining,Coffee with colleagues,Chutneys,274.0,Expense,UPI,Hyderabad
+2025-11-10,Subscriptions,Plan renewal,The Hindu Digital,649.0,Expense,UPI,Hyderabad
+2026-02-01,Entertainment,Weekend outing,Netflix top-up,803.0,Expense,UPI,Hyderabad
+2026-08-27,Transport,Late-night cab,Rapido,206.0,Expense,UPI,Hyderabad
+2026-04-17,Food & Dining,Dinner delivery,Chutneys,216.0,Expense,Cash,Hyderabad
+2026-10-05,Entertainment,Bowling with friends,BookMyShow PVR,1254.0,Expense,Cash,Hyderabad
+2025-11-06,Groceries,Vegetables and milk,Reliance Fresh,1331.0,Expense,Debit Card,Hyderabad
+2026-04-11,Transport,Metro smart card,HP Pay,135.0,Expense,Debit Card,Hyderabad
+2025-11-12,Food & Dining,Dinner delivery,Cafe Coffee Day,791.0,Expense,UPI,Hyderabad
+2026-09-07,Food & Dining,Dinner delivery,Domino's Pizza,238.0,Expense,UPI,Hyderabad
+2026-01-31,Groceries,Weekly groceries,Reliance Fresh,1598.0,Expense,Cash,Hyderabad
+2026-07-09, Transport ,Office commute,Ola,170.0,expense,UPI,Hyderabad
+2026-10-08,Utilities,Electricity bill,Indane Gas,799.0,Expense,UPI,Hyderabad
+2026-03-09,Food & Dining,Coffee with colleagues,Swiggy,148.0,Expense,Debit Card,Hyderabad
+2026-04-09,Food & Dining,Office lunch,Shah Ghouse,507.0,Expense,UPI,Hyderabad
+2026-06-17,Food & Dining,Late-night biryani,Domino's Pizza,323.0,Expense,Cash,Hyderabad
+2026-03-27,Shopping,Clothes,Lifestyle Inorbit,795.0,Expense,Credit Card,Hyderabad
+2026-01-20,Transport,Bike fuel,Hyderabad Metro,331.0,Expense,UPI,Hyderabad
+2026-01-08,Utilities,Gas cylinder,Airtel Broadband,799.0,Expense,Debit Card,Hyderabad
+2026-07-07,Groceries,"Rice, dal and oil",BigBasket,1606.0,Expense,Debit Card,Hyderabad
+2026-04-05,Food & Dining,Late-night biryani,Swiggy,1114.0,Expense,UPI,Hyderabad
+2026-01-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-05-12,Transport,Metro smart card,Indian Oil Petrol,366.0,Expense,UPI,Hyderabad
+2026-02-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-07-14, Food & Dining ,Office lunch,,456.0,expense,UPI,Hyderabad
+2025-12-03,Healthcare,Medicines,Aarogya Clinic,1998.0,Expense,Cash,Hyderabad
+2026-06-26,Food & Dining,Late-night biryani,Domino's Pizza,333.0,Expense,Credit Card,Hyderabad
+2026-02-26,Transport,Late-night cab,Rapido,124.0,Expense,UPI,Hyderabad
+2026-03-31,Travel,Home-town trip,MakeMyTrip,6517.0,Expense,UPI,Hyderabad
+2025-11-09,Utilities,Mobile recharge,TGNPDCL Electricity,399.0,Expense,Credit Card,Hyderabad
+2026-07-23,Cashback,App cashback,Amazon Pay cashback,329.0,Income,Debit Card,Hyderabad
+2026-04-22,Food & Dining,Weekend lunch out,Paradise Biryani,299.0,Expense,Cash,Hyderabad
+2026-03-13,Food & Dining,Dinner delivery,Abshek's Kitchen,198.0,Expense,UPI,Hyderabad
+2026-06-08,Utilities,Mobile recharge,Indane Gas,799.0,Expense,UPI,Hyderabad
+2026-10-10,Transport,Airport drop,TSRTC,303.0,Expense,UPI,Hyderabad
+2026-02-10,Subscriptions,Plan renewal,Hotstar,119.0,Expense,UPI,Hyderabad
+2026-06-21,Food & Dining,Late-night biryani,Chutneys,212.0,Expense,Cash,Hyderabad
+2026-09-20,Food & Dining,Weekend lunch out,Chutneys,1185.0,Expense,UPI,Hyderabad
+2026-05-13,Miscellaneous,Small transfer,Friend repayment,384.0,Expense,UPI,Hyderabad
+2025-12-20,Miscellaneous,Small transfer,GPay self-transfer,509.0,Expense,UPI,Hyderabad
+2026-02-07,Transport,Office commute,Hyderabad Metro,61.0,Expense,UPI,Hyderabad
+2026-04-10,Subscriptions,Monthly subscription,Netflix,649.0,Expense,Credit Card,Hyderabad
+2026-07-07,Utilities,Gas cylinder,HMWSSB Water,2242.0,Expense,UPI,Hyderabad
+2026-08-10,Food & Dining,Coffee with colleagues,Domino's Pizza,528.0,Expense,UPI,Hyderabad
+2026-08-10,Subscriptions,Plan renewal,ChatGPT Plus,119.0,Expense,Net Banking,Hyderabad
+2026-08-01,Groceries,Household supplies,Ratnadeep,1058.0,Expense,Cash,Hyderabad
+2026-07-10,Subscriptions,Monthly subscription,,119.0,Expense,UPI,Hyderabad
+2025-11-03,Cashback,App cashback,Amazon Pay cashback,60.0,Income,Credit Card,Hyderabad
+2025-11-28,Groceries,Snacks restock,Reliance Fresh,1320.0,Expense,UPI,Hyderabad
+2026-10-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-08-06,Food & Dining,Dinner delivery,Domino's Pizza,717.0,Expense,Credit Card,Hyderabad
+2026-10-09,Transport,Late-night cab,Hyderabad Metro,96.0,Expense,Credit Card,Hyderabad
+2025-11-08,Transport,Bike fuel,Indian Oil Petrol,280.0,Expense,UPI,Hyderabad
+2025-11-29,Transport,Airport drop,Hyderabad Metro,274.0,Expense,Net Banking,Hyderabad
+2026-10-12,Shopping,Home essentials,Amazon.in,3606.0,Expense,UPI,Hyderabad
+2026-10-03,Food & Dining,Late-night biryani,Swiggy,791.0,Expense,UPI,Hyderabad
+2025-11-02,Food & Dining,Office lunch,Zomato,379.0,Expense,UPI,Hyderabad
+2026-06-29,Entertainment,Concert / event,Netflix top-up,311.0,Expense,UPI,Hyderabad
+2026-06-06,Food & Dining,Breakfast on the go,Domino's Pizza,926.0,Expense,Cash,Hyderabad
+2026-04-18,Transport,Airport drop,Uber,148.0,Expense,Credit Card,Hyderabad
+2026-10-04,Transport,Metro smart card,TSRTC,239.0,Expense,Net Banking,Hyderabad
+2026-04-03,Food & Dining,Dinner delivery,Shah Ghouse,816.0,Expense,UPI,Hyderabad
+2026-07-20,Personal Care,Haircut,Naturals,608.0,Expense,Debit Card,Hyderabad
+2026-04-04,Shopping,Festival shopping,Myntra,821.0,Expense,Debit Card,Hyderabad
+2026-07-30,Groceries,Vegetables and milk,DMart Kukatpally,1696.0,Expense,UPI,Hyderabad
+2026-02-27,Healthcare,Doctor consultation,PharmEasy,1456.0,Expense,Cash,Hyderabad
+2025-11-12,Transport,Bike fuel,TSRTC,198.0,Expense,UPI,Hyderabad
+2026-08-17,Food & Dining,Dinner delivery,Starbucks Gachibowli,231.0,Expense,Cash,Hyderabad
+2026-03-19, Entertainment ,Weekend outing,District by Zomato,1485.0,expense,UPI,Hyderabad
+2025-11-30,Groceries,Snacks restock,Heritage Fresh,2211.0,Expense,UPI,Hyderabad
+2026-05-15,Education,Certification exam,Stationery Mart,1500.0,Expense,Debit Card,Hyderabad
+2026-03-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2025-11-20,Transport,Office commute,Hyderabad Metro,356.0,Expense,Debit Card,Hyderabad
+2026-01-21,Food & Dining,Dinner delivery,Abshek's Kitchen,701.0,Expense,Debit Card,Hyderabad
+2026-03-05,FOOD & DINING,Late-night biryani,Domino's Pizza,237.0,expense,Debit Card,Hyderabad
+2026-10-10,Shopping,Headphones,Amazon.in,1356.0,Expense,Net Banking,Hyderabad
+2026-05-22,Food & Dining,Breakfast on the go,Abshek's Kitchen,848.0,Expense,UPI,Hyderabad
+2026-05-18,Transport,Office commute,Hyderabad Metro,414.0,Expense,UPI,Hyderabad
+2026-02-02,miscellaneous,Misc. payment,Courier — DTDC,366.0,EXPENSE,UPI,Hyderabad
+2026-09-08,Utilities,Water bill,TGNPDCL Electricity,799.0,Expense,UPI,Hyderabad
+2026-07-09,Healthcare,Doctor consultation,Yashoda Hospital,1992.0,Expense,UPI,Hyderabad
+2026-02-11,Subscriptions,Monthly subscription,Netflix,299.0,Expense,UPI,Hyderabad
+2026-09-09,Food & Dining,Coffee with colleagues,Cafe Coffee Day,318.0,Expense,Net Banking,Hyderabad
+2026-09-14,Cashback,App cashback,PhonePe rewards,113.0,Income,UPI,Hyderabad
+2026-06-11,Subscriptions,Monthly subscription,YouTube Premium,299.0,Expense,Cash,Hyderabad
+2026-10-07,Transport,Airport drop,Ola,326.0,Expense,UPI,Hyderabad
+2026-10-12,Food & Dining,Coffee with colleagues,Domino's Pizza,765.0,Expense,Cash,Hyderabad
+2026-09-04,Shopping,Headphones,Croma,2316.0,Expense,UPI,Hyderabad
+2026-09-11,Subscriptions,Plan renewal,Spotify Premium,299.0,Expense,Debit Card,Hyderabad
+2025-12-07,Entertainment,Movie tickets,Shilparamam,2420.0,Expense,Debit Card,Hyderabad
+2026-06-22,Healthcare,Vitamins,Yashoda Hospital,1115.0,Expense,Net Banking,Hyderabad
+2026-01-30,Transport,Late-night cab,TSRTC,141.0,Expense,UPI,Hyderabad
+2026-06-29,Transport,Office commute,Indian Oil Petrol,383.0,Expense,Debit Card,Hyderabad
+2026-01-24,TRANSPORT,Office commute,TSRTC,38.0,expense,UPI,Hyderabad
+2026-04-13,Transport,Metro smart card,TSRTC,170.0,Expense,UPI,Hyderabad
+2026-02-10,Entertainment,Weekend outing,BookMyShow PVR,1192.0,Expense,UPI,Hyderabad
+2026-07-18,Entertainment,Movie tickets,Wonderla,576.0,Expense,Credit Card,Hyderabad
+2026-05-15,Food & Dining,Coffee with colleagues,Zomato,859.0,Expense,UPI,Hyderabad
+2026-05-29,Cashback,App cashback,PhonePe rewards,301.0,Income,Credit Card,Hyderabad
+2026-09-29,Food & Dining,Coffee with colleagues,Paradise Biryani,361.0,Expense,UPI,Hyderabad
+2026-07-18,Freelance,Freelance project payout,Freelance invoice — Tableau dashboard,8619.0,Income,Net Banking,Hyderabad
+2026-01-19,Food & Dining,Breakfast on the go,Paradise Biryani,259.0,Expense,UPI,Hyderabad
+2026-06-29,Entertainment,,Netflix top-up,404.0,Expense,Credit Card,Hyderabad
+2026-07-05,Transport,Airport drop,Uber,150.0,Expense,Credit Card,Hyderabad
+2026-02-28,Food & Dining,Late-night biryani,Minerva Coffee Shop,646.0,Expense,Cash,Hyderabad
+2026-07-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-08-24,CASHBACK,App cashback,CRED cashback,99.0,income,UPI,Hyderabad
+2025-12-25,Travel,Hotel stay,IRCTC,7829.0,Expense,UPI,Hyderabad
+2026-06-16,Entertainment,Weekend outing,Shilparamam,317.0,Expense,Credit Card,Hyderabad
+2026-09-30,Transport,Airport drop,Rapido,109.0,Expense,UPI,Hyderabad
+2026-08-07,Cashback,App cashback,PhonePe rewards,189.0,Income,Debit Card,Hyderabad
+2025-12-09,Food & Dining,Breakfast on the go,Paradise Biryani,811.0,Expense,UPI,Hyderabad
+2026-01-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-06-09,Groceries,Vegetables and milk,More Supermarket,1233.0,Expense,Debit Card,Hyderabad
+2026-10-12,Cashback,App cashback,Amazon Pay cashback,128.0,Income,Cash,Hyderabad
+2026-01-03,Transport,Bike fuel,Rapido,125.0,Expense,Debit Card,Hyderabad
+2025-12-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-01-19,Groceries,"Rice, dal and oil",DMart Kukatpally,324.0,Expense,Credit Card,Hyderabad
+2026-06-07,Transport,Airport drop,Indian Oil Petrol,301.0,Expense,Debit Card,Hyderabad
+2026-10-07,Groceries,Weekly groceries,Reliance Fresh,831.0,Expense,Debit Card,Hyderabad
+2026-02-18,,Weekly groceries,Heritage Fresh,577.0,Expense,UPI,Hyderabad
+2026-07-02,Food & Dining,Late-night biryani,Starbucks Gachibowli,569.0,Expense,UPI,Hyderabad
+2026-08-20,Food & Dining,Dinner delivery,Abshek's Kitchen,798.0,Expense,UPI,Hyderabad
+2026-10-04, Transport ,Late-night cab,Rapido,69.0,expense,Cash,Hyderabad
+2026-08-11,Subscriptions,Monthly subscription,Hotstar,299.0,Expense,UPI,Hyderabad
+2025-11-05,Food & Dining,Late-night biryani,Shah Ghouse,296.0,Expense,UPI,Hyderabad
+2026-10-03,Food & Dining,Dinner delivery,Swiggy,718.0,Expense,UPI,Hyderabad
+2025-11-20,Food & Dining,Office lunch,Domino's Pizza,883.0,Expense,UPI,Hyderabad
+2026-01-13,Transport,Office commute,HP Pay,75.0,Expense,UPI,Hyderabad
+2026-03-12,Transport,Bike fuel,HP Pay,121.0,Expense,Cash,Hyderabad
+2026-04-10,Food & Dining,Office lunch,Minerva Coffee Shop,459.0,Expense,UPI,Hyderabad
+2026-08-06,Groceries,"Rice, dal and oil",Swiggy Instamart,1799.0,Expense,,Hyderabad
+2026-08-07,Utilities,Internet bill,Indane Gas,1830.0,Expense,UPI,Hyderabad
+2026-05-15,Personal Care,Haircut,Nykaa,1057.0,Expense,UPI,Hyderabad
+2025-12-05,Insurance,Monthly premium,Star Health,1185.0,Expense,Net Banking,Hyderabad
+2025-12-28,Transport,Bike fuel,TSRTC,,Expense,Debit Card,Hyderabad
+2026-10-10,Subscriptions,Plan renewal,Spotify Premium,119.0,Expense,UPI,Hyderabad
+2026-07-21,MISCELLANEOUS,Misc. payment,GPay self-transfer,157.0,expense,UPI,Hyderabad
+2026-07-16,Entertainment,Bowling with friends,Spotify,,Expense,Credit Card,Hyderabad
+2026-03-19,Transport,Bike fuel,Indian Oil Petrol,214.0,Expense,Credit Card,Hyderabad
+2026-09-07,Transport,Metro smart card,HP Pay,336.0,Expense,UPI,Hyderabad
+2026-04-09,Utilities,Electricity bill,Indane Gas,399.0,Expense,UPI,Hyderabad
+2026-06-11,Food & Dining,Dinner delivery,Chutneys,198.0,Expense,Credit Card,Hyderabad
+2026-01-19,Groceries,Snacks restock,More Supermarket,788.0,Expense,Debit Card,Hyderabad
+2026-06-28,TRANSPORT,Metro smart card,Ola,68.0,EXPENSE,UPI,Hyderabad
+2026-06-30,Shopping,Headphones,GVK One Mall,2484.0,Expense,UPI,Hyderabad
+2026-03-22,Personal Care,Grooming kit,Nykaa,706.0,Expense,UPI,Hyderabad
+2026-09-15,Groceries,"Rice, dal and oil",Ratnadeep,1730.0,Expense,UPI,Hyderabad
+2026-05-13,Shopping,Phone case / accessories,Amazon.in,3245.0,Expense,UPI,Hyderabad
+2026-09-21,Food & Dining,Office lunch,Starbucks Gachibowli,370.0,Expense,UPI,Hyderabad
+2025-11-20,Personal Care,Haircut,Kaya Clinic,662.0,Expense,Credit Card,Hyderabad
+2026-01-08,Food & Dining,Breakfast on the go,Paradise Biryani,197.0,Expense,UPI,Hyderabad
+2026-06-18,Transport,Office commute,Ola,309.0,Expense,Debit Card,Hyderabad
+2026-06-12,Transport,Metro smart card,TSRTC,58.0,Expense,UPI,Hyderabad
+2026-04-12,Food & Dining,Dinner delivery,Zomato,1144.0,Expense,Debit Card,Hyderabad
+2026-02-13,Food & Dining,Dinner delivery,Abshek's Kitchen,140.0,Expense,UPI,Hyderabad
+2026-05-09,Food & Dining,Breakfast on the go,Minerva Coffee Shop,293.0,Expense,Credit Card,Hyderabad
+2026-07-17,Food & Dining,Breakfast on the go,Domino's Pizza,471.0,Expense,Net Banking,Hyderabad
+2026-01-16,Travel,Weekend getaway,IndiGo,4244.0,Expense,Credit Card,Hyderabad
+2026-07-05,Transport,Airport drop,HP Pay,104.0,Expense,UPI,Hyderabad
+2026-10-05,Food & Dining,Weekend lunch out,Swiggy,615.0,Expense,UPI,Hyderabad
+2026-08-05,Miscellaneous,Donation,Courier — DTDC,227.0,Expense,UPI,Hyderabad
+2026-06-15,Groceries,Vegetables and milk,Swiggy Instamart,947.0,Expense,Debit Card,Hyderabad
+2026-07-01,Shopping,Home essentials,GVK One Mall,3356.0,Expense,Cash,Hyderabad
+2026-09-22,Personal Care,Salon,Kaya Clinic,1078.0,Expense,UPI,Hyderabad
+2026-01-17,Shopping,Clothes,Lifestyle Inorbit,2040.0,Expense,UPI,Hyderabad
+2026-08-15,Personal Care,Grooming kit,Urban Company,488.0,Expense,UPI,Hyderabad
+2026-05-08,Utilities,Mobile recharge,Jio Fiber,799.0,Expense,UPI,Hyderabad
+2026-07-09,Transport,Metro smart card,TSRTC,84.0,Expense,Debit Card,Hyderabad
+2026-04-24,Transport,Metro smart card,Hyderabad Metro,391.0,Expense,Debit Card,Hyderabad
+2026-02-09,Food & Dining,Dinner delivery,Domino's Pizza,529.0,Expense,UPI,Hyderabad
+2026-01-05,Transport,Bike fuel,Ola,205.0,Expense,UPI,Hyderabad
+2026-09-09,Utilities,,HMWSSB Water,399.0,Expense,UPI,Hyderabad
+2025-12-22, Transport ,Late-night cab,Uber,440.0,expense,Net Banking,Hyderabad
+2026-01-15,Education,Online course,Udemy,1500.0,Expense,UPI,Hyderabad
+2026-03-06,Groceries,Snacks restock,Heritage Fresh,571.0,Expense,UPI,Hyderabad
+2026-06-04,Transport,Metro smart card,Ola,234.0,Expense,Net Banking,Hyderabad
+2026-07-11,Subscriptions,Monthly subscription,Hotstar,299.0,Expense,UPI,Hyderabad
+2026-08-02,Shopping,Clothes,Croma,1328.0,Expense,Credit Card,Hyderabad
+2025-12-22,Miscellaneous,Donation,Temple donation,667.0,Expense,UPI,Hyderabad
+2026-05-20,Groceries,Snacks restock,More Supermarket,824.0,Expense,UPI,Hyderabad
+2026-04-23,Transport,Airport drop,Uber,417.0,Expense,UPI,Hyderabad
+2026-03-31,Transport,Office commute,HP Pay,264.0,Expense,Credit Card,Hyderabad
+2026-04-07,Cashback,App cashback,Amazon Pay cashback,70.0,Income,Cash,Hyderabad
+2026-03-12,Transport,Bike fuel,TSRTC,361.0,Expense,Credit Card,Hyderabad
+2026-06-06,Transport,Late-night cab,Hyderabad Metro,57.0,Expense,UPI,Hyderabad
+2026-01-05,Insurance,Monthly premium,Acko Two-Wheeler,1185.0,Expense,Net Banking,Hyderabad
+2026-02-08,Entertainment,Concert / event,Wonderla,1750.0,Expense,UPI,Hyderabad
+2026-02-15,Food & Dining,Coffee with colleagues,Starbucks Gachibowli,1134.0,Expense,Cash,Hyderabad
+2026-06-30,Food & Dining,Late-night biryani,Chutneys,291.0,Expense,Credit Card,Hyderabad
+2026-04-22,shopping,Phone case / accessories,Croma,461.0,EXPENSE,UPI,Hyderabad
+2026-03-10,Subscriptions,Plan renewal,Netflix,649.0,Expense,UPI,Hyderabad
+2026-06-12,Transport,Bike fuel,HP Pay,89.0,Expense,Credit Card,Hyderabad
+2026-02-11,Transport,Office commute,Hyderabad Metro,111.0,Expense,UPI,Hyderabad
+2026-08-26,Food & Dining,Dinner delivery,Shah Ghouse,356.0,Expense,UPI,Hyderabad
+2026-09-05,Transport,Metro smart card,TSRTC,149.0,Expense,UPI,Hyderabad
+2026-02-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-09-21,Food & Dining,Breakfast on the go,Abshek's Kitchen,348.0,Expense,Net Banking,Hyderabad
+2026-01-10,Subscriptions,Plan renewal,YouTube Premium,649.0,Expense,UPI,Hyderabad
+2026-06-07,Utilities,Water bill,Jio Fiber,1455.0,Expense,UPI,Hyderabad
+2026-04-10,Subscriptions,Plan renewal,Spotify Premium,119.0,Expense,Cash,Hyderabad
+2026-08-13,Groceries,Vegetables and milk,DMart Kukatpally,1824.0,Expense,Credit Card,Hyderabad
+2026-02-22,Food & Dining,Late-night biryani,Domino's Pizza,280.0,Expense,UPI,Hyderabad
+2026-10-01,PERSONAL CARE,Grooming kit,Kaya Clinic,1080.0,EXPENSE,Debit Card,Hyderabad
+2026-09-16,Entertainment,Concert / event,BookMyShow PVR,1150.0,Expense,Cash,Hyderabad
+2026-10-02,Food & Dining,Breakfast on the go,Paradise Biryani,818.0,Expense,UPI,Hyderabad
+2026-08-10,Transport,Late-night cab,TSRTC,383.0,Expense,UPI,Hyderabad
+2026-05-31,Cashback,App cashback,CRED cashback,277.0,Income,UPI,Hyderabad
+2026-10-13,Miscellaneous,Misc. payment,Courier — DTDC,125.0,Expense,UPI,Hyderabad
+2026-08-03,Groceries,"Rice, dal and oil",Swiggy Instamart,531.0,Expense,UPI,Hyderabad
+2026-03-23,Food & Dining,Weekend lunch out,Abshek's Kitchen,738.0,Expense,Cash,Hyderabad
+2026-07-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2026-07-26,Food & Dining,Office lunch,Shah Ghouse,916.0,Expense,UPI,Hyderabad
+2025-12-30,GROCERIES,Weekly groceries,DMart Kukatpally,853.0,expense,Credit Card,Hyderabad
+2026-03-03,Groceries,Snacks restock,More Supermarket,1351.0,Expense,UPI,Hyderabad
+2026-09-15,Education,Technical book,Amazon Books,1500.0,Expense,UPI,Hyderabad
+2026-05-21,Transport,Metro smart card,Uber,376.0,Expense,UPI,Hyderabad
+2026-03-03,Transport,Bike fuel,Ola,213.0,Expense,UPI,Hyderabad
+2026-08-19,FOOD & DINING,Breakfast on the go,Minerva Coffee Shop,750.0,EXPENSE,UPI,Hyderabad
+2026-04-18,Transport,Airport drop,Hyderabad Metro,270.0,Expense,Debit Card,Hyderabad
+2026-06-10,Subscriptions,Monthly subscription,Netflix,119.0,Expense,Debit Card,Hyderabad
+2026-09-25,Transport,Office commute,Uber,370.0,Expense,Debit Card,Hyderabad
+2026-05-13,Food & Dining,Late-night biryani,Starbucks Gachibowli,787.0,Expense,UPI,Hyderabad
+2026-03-14,Transport,Airport drop,TSRTC,119.0,Expense,Credit Card,Hyderabad
+2026-04-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-05-25,Food & Dining,Dinner delivery,Cafe Coffee Day,996.0,Expense,UPI,Hyderabad
+2026-05-30,Groceries,"Rice, dal and oil",BigBasket,1193.0,Expense,Cash,Hyderabad
+2026-02-27,SHOPPING,Phone case / accessories,Lifestyle Inorbit,1973.0,expense,Cash,Hyderabad
+2026-10-09,Utilities,Internet bill,Indane Gas,399.0,Expense,Cash,Hyderabad
+2026-08-28,Shopping,Home essentials,GVK One Mall,1603.0,Expense,UPI,Hyderabad
+2026-07-13,Transport,Office commute,Rapido,231.0,Expense,Credit Card,Hyderabad
+2026-05-07,Transport,Bike fuel,Hyderabad Metro,384.0,Expense,UPI,Hyderabad
+2026-08-01,Entertainment,,BookMyShow PVR,2075.0,Expense,Credit Card,Hyderabad
+2026-10-15,Food & Dining,Dinner delivery,Swiggy,537.0,Expense,UPI,Hyderabad
+2026-10-05,Insurance,Monthly premium,LIC Premium,1185.0,Expense,Net Banking,Hyderabad
+2026-09-10,Subscriptions,Plan renewal,Spotify Premium,649.0,Expense,Debit Card,Hyderabad
+2025-12-16,Food & Dining,Weekend lunch out,Domino's Pizza,998.0,Expense,Cash,Hyderabad
+2026-03-07,Shopping,Phone case / accessories,Flipkart,634.0,Expense,UPI,Hyderabad
+2026-01-23,Cashback,App cashback,PhonePe rewards,211.0,Income,Credit Card,Hyderabad
+2026-08-10,Subscriptions,Monthly subscription,Hotstar,649.0,Expense,UPI,Hyderabad
+2025-11-18,Transport,Metro smart card,Indian Oil Petrol,92.0,Expense,UPI,Hyderabad
+2026-08-18,Entertainment,Bowling with friends,Spotify,1054.0,Expense,Debit Card,Hyderabad
+2026-01-31,Transport,Bike fuel,Ola,208.0,Expense,UPI,Hyderabad
+2026-09-10,Food & Dining,Dinner delivery,Shah Ghouse,688.0,Expense,Cash,Hyderabad
+2026-09-07,Transport,Bike fuel,Hyderabad Metro,177.0,Expense,UPI,Hyderabad
+2026-10-07,Groceries,Snacks restock,DMart Kukatpally,1089.0,Expense,UPI,Hyderabad
+2025-12-22,Transport,Metro smart card,HP Pay,196.0,Expense,Cash,Hyderabad
+2026-03-07,Utilities,Water bill,Jio Fiber,1702.0,Expense,UPI,Hyderabad
+2026-07-09,Utilities,Internet bill,HMWSSB Water,399.0,Expense,Cash,Hyderabad
+2026-08-26,Entertainment,Movie tickets,Netflix top-up,534.0,Expense,UPI,Hyderabad
+2026-09-17,Food & Dining,Coffee with colleagues,Domino's Pizza,499.0,Expense,UPI,Hyderabad
+2026-02-17,Transport,Late-night cab,Hyderabad Metro,137.0,Expense,UPI,Hyderabad
+2026-06-02,Food & Dining,Breakfast on the go,Zomato,427.0,Expense,UPI,Hyderabad
+2026-06-05,Healthcare,Vitamins,Apollo Pharmacy,1309.0,Expense,UPI,Hyderabad
+2026-09-07,Entertainment,Bowling with friends,Netflix top-up,276.0,Expense,Cash,Hyderabad
+2026-02-22,Cashback,App cashback,PhonePe rewards,154.0,Income,UPI,Hyderabad
+2025-11-02,food & dining,Coffee with colleagues,Shah Ghouse,620.0,EXPENSE,UPI,Hyderabad
+2026-09-22,miscellaneous,Misc. payment,Friend repayment,167.0,EXPENSE,UPI,Hyderabad
+2026-08-23,Groceries,Weekly groceries,Heritage Fresh,2013.0,Expense,UPI,Hyderabad
+2025-12-23,Food & Dining,Dinner delivery,Shah Ghouse,264.0,Expense,Cash,Hyderabad
+2026-09-07,Food & Dining,Late-night biryani,Zomato,495.0,Expense,Cash,Hyderabad
+2026-06-09,Utilities,Gas cylinder,Indane Gas,399.0,Expense,Cash,Hyderabad
+2026-08-01,Salary,Monthly salary,TCS Salary Credit,55000.0,Income,Net Banking,Hyderabad
+2025-11-29,Transport,Airport drop,Uber,76.0,Expense,Cash,Hyderabad
+2025-11-17,food & dining,Late-night biryani,Domino's Pizza,676.0,EXPENSE,UPI,Hyderabad
+2026-02-14,Groceries,Vegetables and milk,DMart Kukatpally,501.0,Expense,Cash,Hyderabad
+2026-01-11,Transport,Metro smart card,Hyderabad Metro,189.0,Expense,,Hyderabad
+2025-11-13,Food & Dining,Dinner delivery,Chutneys,310.0,Expense,UPI,Hyderabad
+2026-09-18,Personal Care,Salon,Kaya Clinic,404.0,Expense,UPI,Hyderabad
+2026-03-01,Groceries,Household supplies,Ratnadeep,427.0,Expense,UPI,Hyderabad
+2026-07-22,Food & Dining,Coffee with colleagues,Chutneys,413.0,Expense,UPI,Hyderabad
+2026-05-26,TRANSPORT,Late-night cab,Uber,113.0,EXPENSE,Credit Card,Hyderabad
+2026-04-05,Food & Dining,Weekend lunch out,Zomato,394.0,Expense,UPI,Hyderabad
+2026-06-15,Education,Stationery,NPTEL exam fee,1500.0,Expense,Credit Card,Hyderabad
+2026-06-02,Cashback,App cashback,CRED cashback,164.0,Income,Cash,Hyderabad
+2026-07-28,Transport,Office commute,Indian Oil Petrol,297.0,Expense,UPI,Hyderabad
+2026-01-13,Groceries,Snacks restock,Ratnadeep,1430.0,Expense,Credit Card,Hyderabad
+2025-12-05,Personal Care,Grooming kit,Nykaa,1416.0,Expense,Debit Card,Hyderabad
+2026-07-12,Groceries,Weekly groceries,BigBasket,446.0,Expense,UPI,Hyderabad
+2026-01-09,Utilities,Mobile recharge,Airtel Broadband,399.0,Expense,Cash,Hyderabad
+2026-10-13,Food & Dining,Breakfast on the go,Zomato,517.0,Expense,UPI,Hyderabad
+2026-08-08,Food & Dining,Weekend lunch out,Domino's Pizza,1179.0,Expense,Debit Card,Hyderabad
+2025-12-06,Transport,Metro smart card,TSRTC,115.0,Expense,UPI,Hyderabad
+2025-11-07,Utilities,Internet bill,Airtel Broadband,1839.0,Expense,Debit Card,Hyderabad
+2026-01-21,Food & Dining,Breakfast on the go,Cafe Coffee Day,164.0,Expense,UPI,Hyderabad
+2025-11-22,Transport,Late-night cab,Ola,140.0,Expense,UPI,Hyderabad
+2026-07-25,Groceries,Household supplies,BigBasket,1523.0,Expense,Cash,Hyderabad
+2026-05-27,Groceries,Vegetables and milk,DMart Kukatpally,426.0,Expense,Credit Card,Hyderabad
+2026-02-09,Shopping,Headphones,Ajio,2566.0,Expense,Debit Card,Hyderabad
+2026-02-21,Transport,Airport drop,TSRTC,279.0,Expense,UPI,Hyderabad
+2025-11-30,Transport,Bike fuel,TSRTC,154.0,Expense,UPI,Hyderabad
+2026-05-04,Transport,Bike fuel,Uber,340.0,Expense,UPI,Hyderabad
+2026-04-08, Utilities ,Mobile recharge,HMWSSB Water,799.0,EXPENSE,UPI,Hyderabad
+2026-03-12,Food & Dining,Coffee with colleagues,Swiggy,270.0,Expense,Debit Card,Hyderabad
+2026-07-09,Cashback,App cashback,PhonePe rewards,108.0,Income,UPI,Hyderabad
+2026-07-06,Transport,Airport drop,Rapido,138.0,Expense,UPI,Hyderabad
+2025-12-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-03-25,Shopping,Festival shopping,Lifestyle Inorbit,3529.0,Expense,UPI,Hyderabad
+2026-02-15,EDUCATION,Stationery,NPTEL exam fee,1500.0,EXPENSE,Debit Card,Hyderabad
+2026-01-24,Food & Dining,Dinner delivery,Shah Ghouse,946.0,Expense,Credit Card,Hyderabad
+2026-08-27, Transport ,Airport drop,Rapido,407.0,EXPENSE,UPI,Hyderabad
+2026-06-06,Miscellaneous,Misc. payment,GPay self-transfer,645.0,Expense,Credit Card,Hyderabad
+2026-07-15,Food & Dining,Late-night biryani,Cafe Coffee Day,715.0,Expense,UPI,Hyderabad
+2025-12-26,Transport,Office commute,HP Pay,193.0,Expense,Cash,Hyderabad
+2026-09-03,Groceries,Household supplies,More Supermarket,1069.0,Expense,UPI,Hyderabad
+2026-06-01,Food & Dining,Breakfast on the go,Abshek's Kitchen,379.0,Expense,UPI,Hyderabad
+2025-11-01,Entertainment,Movie tickets,District by Zomato,2623.0,Expense,UPI,Hyderabad
+2026-10-06,Groceries,Vegetables and milk,Ratnadeep,1165.0,Expense,UPI,Hyderabad
+2026-09-01,Transport,Metro smart card,Rapido,391.0,Expense,UPI,Hyderabad
+2025-12-12,Shopping,Headphones,Ajio,1726.0,Expense,Debit Card,Hyderabad
+2026-02-16,personal care,Grooming kit,Local Salon,826.0,expense,UPI,Hyderabad
+2025-11-18,Transport,Bike fuel,Uber,468.0,Expense,Debit Card,Hyderabad
+2026-08-03,Cashback,App cashback,Amazon Pay cashback,163.0,Income,UPI,Hyderabad
+2026-06-22,Transport,Late-night cab,TSRTC,211.0,Expense,UPI,Hyderabad
+2026-07-06,Transport,Airport drop,Indian Oil Petrol,181.0,Expense,Credit Card,Hyderabad
+2026-05-15,Transport,Airport drop,TSRTC,145.0,Expense,Credit Card,Hyderabad
+2025-12-20,Food & Dining,Office lunch,Starbucks Gachibowli,393.0,Expense,Net Banking,Hyderabad
+2026-05-05,Groceries,Snacks restock,Swiggy Instamart,650.0,Expense,UPI,Hyderabad
+2026-09-03,Cashback,App cashback,CRED cashback,109.0,Income,Credit Card,Hyderabad
+2026-05-07,Utilities,Gas cylinder,Airtel Broadband,1720.0,Expense,UPI,Hyderabad
+2026-03-07,Transport,Airport drop,Ola,303.0,Expense,UPI,Hyderabad
+2025-11-06,Transport,Bike fuel,Hyderabad Metro,211.0,Expense,UPI,Hyderabad
+2026-04-18,GROCERIES,Vegetables and milk,Swiggy Instamart,818.0,expense,UPI,Hyderabad
+2026-09-20,Groceries,Weekly groceries,Heritage Fresh,1520.0,Expense,UPI,Hyderabad
+2026-05-31, Food & Dining ,Late-night biryani,Cafe Coffee Day,323.0,EXPENSE,Net Banking,Hyderabad
+2026-03-28,Interest,Savings-account interest,SBI Savings interest,283.0,Income,UPI,Hyderabad
+2026-01-28,Groceries,"Rice, dal and oil",Heritage Fresh,464.0,Expense,Debit Card,Hyderabad
+2026-05-16,Food & Dining,Dinner delivery,Swiggy,205.0,Expense,Credit Card,Hyderabad
+2026-07-20,Groceries,Vegetables and milk,DMart Kukatpally,1657.0,Expense,UPI,Hyderabad
+2026-10-13,Miscellaneous,Small transfer,GPay self-transfer,375.0,Expense,UPI,Hyderabad
+2026-08-01,Transport,Metro smart card,Rapido,235.0,Expense,UPI,Hyderabad
+2026-03-08,Utilities,Electricity bill,TGNPDCL Electricity,799.0,Expense,UPI,Hyderabad
+2026-09-03,Healthcare,Blood test,PharmEasy,1436.0,Expense,UPI,Hyderabad
+2026-09-02,Rent,House rent,Landlord UPI — Kukatpally,14000.0,Expense,Net Banking,Hyderabad
+2026-02-10,Subscriptions,Monthly subscription,Spotify Premium,649.0,Expense,UPI,Hyderabad
+2026-07-15,Groceries,Snacks restock,BigBasket,946.0,Expense,UPI,Hyderabad
+2026-08-03,transport,Airport drop,Uber,403.0,EXPENSE,Credit Card,Hyderabad
+2025-12-04,Food & Dining,Late-night biryani,Minerva Coffee Shop,598.0,Expense,Debit Card,Hyderabad
+2026-07-15,Education,Certification exam,Udemy,1500.0,Expense,UPI,Hyderabad
+2026-09-01,Food & Dining,Office lunch,Minerva Coffee Shop,515.0,Expense,Cash,Hyderabad
+2026-03-12,Transport,Late-night cab,Hyderabad Metro,218.0,Expense,Cash,Hyderabad
+2025-11-10,Food & Dining,Weekend lunch out,Minerva Coffee Shop,562.0,Expense,UPI,Hyderabad
+2026-04-17,Miscellaneous,Small transfer,Courier — DTDC,669.0,Expense,UPI,Hyderabad
+2026-07-08,Food & Dining,Breakfast on the go,Domino's Pizza,151.0,Expense,UPI,Hyderabad
+2026-01-24,Food & Dining,Dinner delivery,Shah Ghouse,934.0,Expense,UPI,Hyderabad
+2026-03-30,Transport,Bike fuel,Hyderabad Metro,90.0,Expense,Cash,Hyderabad
+2026-02-10,Groceries,Household supplies,Heritage Fresh,367.0,Expense,UPI,Hyderabad
+2026-05-30,Transport,Airport drop,Uber,60.0,Expense,UPI,Hyderabad
+2026-06-11,Food & Dining,Breakfast on the go,Domino's Pizza,372.0,Expense,UPI,Hyderabad
+2026-07-24,Shopping,Home essentials,Amazon.in,431.0,Expense,UPI,Hyderabad
+2026-05-06,Transport,Airport drop,Uber,417.0,Expense,Net Banking,Hyderabad
+2026-04-12,Transport,Late-night cab,Hyderabad Metro,69.0,Expense,UPI,Hyderabad
+2026-10-12,Entertainment,Bowling with friends,BookMyShow PVR,666.0,Expense,UPI,Hyderabad
+2026-01-10,Subscriptions,Plan renewal,The Hindu Digital,119.0,Expense,UPI,Hyderabad
+2026-10-13,Food & Dining,Coffee with colleagues,Abshek's Kitchen,436.0,Expense,Debit Card,Hyderabad
+2025-12-23,Miscellaneous,Small transfer,Temple donation,137.0,Expense,UPI,Hyderabad
+2026-05-20,Groceries,"Rice, dal and oil",More Supermarket,854.0,Expense,UPI,Hyderabad
+2025-12-17,Transport,Office commute,Uber,436.0,Expense,Cash,Hyderabad
+2026-07-08,Utilities,Mobile recharge,Indane Gas,799.0,Expense,UPI,Hyderabad
+2026-04-28,Transport,,Indian Oil Petrol,316.0,Expense,Debit Card,Hyderabad
+2026-02-20,Transport,Bike fuel,Indian Oil Petrol,351.0,Expense,Credit Card,Hyderabad
+2026-07-10,Subscriptions,Plan renewal,Spotify Premium,649.0,Expense,Debit Card,Hyderabad
+2026-01-04,Shopping,Clothes,Lifestyle Inorbit,3179.0,Expense,UPI,Hyderabad
+2026-09-29,Food & Dining,Weekend lunch out,Zomato,589.0,Expense,Debit Card,Hyderabad
+2025-11-10,Subscriptions,Plan renewal,Netflix,119.0,Expense,Cash,Hyderabad
+2025-12-09,Utilities,Internet bill,Indane Gas,399.0,Expense,UPI,Hyderabad
+2025-12-26,Transport,Metro smart card,Uber,323.0,Expense,UPI,Hyderabad
+2026-03-27,Groceries,Snacks restock,More Supermarket,1777.0,Expense,UPI,Hyderabad
+2026-06-29,Transport,Office commute,HP Pay,191.0,Expense,Credit Card,Hyderabad
+2025-12-25,Transport,Metro smart card,Indian Oil Petrol,70.0,Expense,UPI,Hyderabad
